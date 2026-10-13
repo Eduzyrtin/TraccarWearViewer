@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Viewer for Traccar</string>
+    <string name="tile_label">Traccar devices</string>
+    <string name="tile_title">Devices</string>
+    <string name="tile_sign_in">Open the app to sign in</string>
+
+    <string name="sign_in">Sign in</string>
+    <string name="sign_out">Sign out</string>
+    <string name="server_url">Server URL</string>
+    <string name="server_url_hint">https://demo.traccar.org</string>
+    <string name="email">Email</string>
+    <string name="email_hint">name@example.com</string>
+    <string name="password">Password</string>
+    <string name="token">Token (instead of password)</string>
+    <string name="token_hint">Create it on the web: Settings › Preferences</string>
+    <string name="optional">Optional</string>
+    <string name="not_set">Not set</string>
+    <string name="save">Save</string>
+
+    <string name="devices">Devices</string>
+    <string name="no_devices">No devices</string>
+    <string name="device_not_found">Device not found</string>
+    <string name="unknown_device">Unknown device</string>
+    <string name="refresh">Refresh</string>
+    <string name="settings">Settings</string>
+    <string name="status_online">Online</string>
+    <string name="status_offline">Offline</string>
+    <string name="status_unknown">Unknown</string>
+    <string name="speed">%1$d km/h</string>
+    <string name="open_map">Open map</string>
+    <string name="opened_on_phone">Opened on the phone</string>
+    <string name="show_in_tile">Show in tile</string>
+    <string name="remove_from_tile">Remove from tile</string>
+
+    <string name="notifications_away">Alerts away from phone</string>
+    <string name="notifications_away_summary">When the phone is not nearby, checks the server every 15 min</string>
+    <string name="channel_events">Server events</string>
+
+    <string name="error_unauthorized">Wrong credentials or expired session</string>
+    <string name="error_network">Cannot connect to the server</string>
+    <string name="error_http">Server error (%1$d)</string>
+    <string name="error_url">Invalid server URL</string>
+    <string name="error_response">Unexpected server response</string>
+
+    <string name="event_device_online">Online</string>
+    <string name="event_device_offline">Offline</string>
+    <string name="event_device_unknown">Status unknown</string>
+    <string name="event_device_moving">Started moving</string>
+    <string name="event_device_stopped">Stopped</string>
+    <string name="event_device_overspeed">Speed limit exceeded</string>
+    <string name="event_fuel_drop">Fuel drop</string>
+    <string name="event_fuel_increase">Fuel increase</string>
+    <string name="event_geofence_enter">Entered %1$s</string>
+    <string name="event_geofence_exit">Left %1$s</string>
+    <string name="event_geofence_fallback">a geofence</string>
+    <string name="event_ignition_on">Ignition on</string>
+    <string name="event_ignition_off">Ignition off</string>
+    <string name="event_maintenance">Maintenance required</string>
+    <string name="event_text_message">Text message received</string>
+    <string name="event_driver_changed">Driver changed</string>
+    <string name="event_alarm">Alarm: %1$s</string>
+</resources>
