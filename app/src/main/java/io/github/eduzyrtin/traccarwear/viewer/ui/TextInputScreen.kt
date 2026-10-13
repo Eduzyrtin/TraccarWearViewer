@@ -6,13 +6,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
-import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.input.TextFieldLineLimits
+import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.res.stringResource
@@ -40,7 +37,7 @@ fun TextInputScreen(
     keyboardType: KeyboardType,
     onSave: (String) -> Unit,
 ) {
-    var value by rememberSaveable { mutableStateOf(initialValue) }
+    val state = rememberTextFieldState(initialValue)
     val listState = rememberTransformingLazyColumnState()
     ScreenScaffold(scrollState = listState) { contentPadding ->
         TransformingLazyColumn(state = listState, contentPadding = contentPadding) {
@@ -54,24 +51,23 @@ fun TextInputScreen(
                         .background(MaterialTheme.colorScheme.surfaceContainer, RoundedCornerShape(24.dp))
                         .padding(horizontal = 16.dp, vertical = 12.dp),
                 ) {
-                    if (value.isEmpty()) {
+                    if (state.text.isEmpty()) {
                         Text(hint, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                     BasicTextField(
-                        value = value,
-                        onValueChange = { value = it },
-                        singleLine = true,
+                        state = state,
+                        lineLimits = TextFieldLineLimits.SingleLine,
                         textStyle = MaterialTheme.typography.bodyMedium.copy(color = MaterialTheme.colorScheme.onSurface),
                         cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
                         keyboardOptions = KeyboardOptions(keyboardType = keyboardType, imeAction = ImeAction.Done),
-                        keyboardActions = KeyboardActions(onDone = { onSave(value) }),
+                        onKeyboardAction = { onSave(state.text.toString()) },
                         modifier = Modifier.fillMaxWidth(),
                     )
                 }
             }
             item {
                 Button(
-                    onClick = { onSave(value) },
+                    onClick = { onSave(state.text.toString()) },
                     modifier = Modifier.fillMaxWidth(),
                     label = { Text(stringResource(R.string.save)) },
                 )
