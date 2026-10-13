@@ -39,13 +39,13 @@ fun LoginScreen(viewModel: ViewerViewModel, onEdit: (LoginField) -> Unit) {
             item {
                 FieldButton(
                     stringResource(R.string.password),
-                    if (form.password.isEmpty()) notSet else "••••••",
+                    form.password.ifEmpty { notSet },
                 ) { onEdit(LoginField.PASSWORD) }
             }
             item {
                 FieldButton(
                     stringResource(R.string.token),
-                    if (form.token.isEmpty()) stringResource(R.string.optional) else "••••••",
+                    form.token.ifEmpty { stringResource(R.string.optional) },
                 ) { onEdit(LoginField.TOKEN) }
             }
             error?.let { message ->

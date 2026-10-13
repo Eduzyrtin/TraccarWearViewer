@@ -18,8 +18,6 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.foundation.lazy.TransformingLazyColumn
 import androidx.wear.compose.foundation.lazy.rememberTransformingLazyColumnState
@@ -41,7 +39,6 @@ fun TextInputScreen(
     hint: String,
     keyboardType: KeyboardType,
     onSave: (String) -> Unit,
-    password: Boolean = false,
 ) {
     var value by rememberSaveable { mutableStateOf(initialValue) }
     val listState = rememberTransformingLazyColumnState()
@@ -68,7 +65,6 @@ fun TextInputScreen(
                         cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
                         keyboardOptions = KeyboardOptions(keyboardType = keyboardType, imeAction = ImeAction.Done),
                         keyboardActions = KeyboardActions(onDone = { onSave(value) }),
-                        visualTransformation = if (password) PasswordVisualTransformation() else VisualTransformation.None,
                         modifier = Modifier.fillMaxWidth(),
                     )
                 }

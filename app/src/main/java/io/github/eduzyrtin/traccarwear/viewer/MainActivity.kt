@@ -70,10 +70,9 @@ private fun LoginNavigation(viewModel: ViewerViewModel) {
                     keyboardType = when (field) {
                         LoginField.SERVER -> KeyboardType.Uri
                         LoginField.EMAIL -> KeyboardType.Email
-                        LoginField.PASSWORD -> KeyboardType.Password
+                        LoginField.PASSWORD -> KeyboardType.Ascii
                         LoginField.TOKEN -> KeyboardType.Ascii
                     },
-                    password = field == LoginField.PASSWORD,
                     onSave = { value ->
                         viewModel.setLoginField(field, value)
                         navController.popBackStack()
