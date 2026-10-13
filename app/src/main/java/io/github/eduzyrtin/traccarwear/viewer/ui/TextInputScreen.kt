@@ -56,18 +56,18 @@ fun TextInputScreen(
                     }
                     BasicTextField(
                         state = state,
-                        lineLimits = TextFieldLineLimits.SingleLine,
+                        lineLimits = TextFieldLineLimits.MultiLine(minHeightInLines = 1, maxHeightInLines = 4),
                         textStyle = MaterialTheme.typography.bodyMedium.copy(color = MaterialTheme.colorScheme.onSurface),
                         cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
                         keyboardOptions = KeyboardOptions(keyboardType = keyboardType, imeAction = ImeAction.Done),
-                        onKeyboardAction = { onSave(state.text.toString()) },
+                        onKeyboardAction = { onSave(state.text.singleLine()) },
                         modifier = Modifier.fillMaxWidth(),
                     )
                 }
             }
             item {
                 Button(
-                    onClick = { onSave(state.text.toString()) },
+                    onClick = { onSave(state.text.singleLine()) },
                     modifier = Modifier.fillMaxWidth(),
                     label = { Text(stringResource(R.string.save)) },
                 )
@@ -75,3 +75,5 @@ fun TextInputScreen(
         }
     }
 }
+
+private fun CharSequence.singleLine(): String = filterNot { it == '\n' }.toString()
