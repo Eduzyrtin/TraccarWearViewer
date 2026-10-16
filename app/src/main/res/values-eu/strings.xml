@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tile_label">Traccar mapa</string>
+    <string name="tile_sign_in">Ireki aplikazioa saioa hasteko</string>
+    <string name="tile_choose_device">Lauzaren gailua</string>
+    <string name="no_positions">Oraindik ez dago posiziorik</string>
+
+    <string name="sign_in">Hasi saioa</string>
+    <string name="sign_out">Itxi saioa</string>
+    <string name="server_url">Zerbitzariaren URLa</string>
+    <string name="email">Posta elektronikoa</string>
+    <string name="email_hint">izena@adibidea.com</string>
+    <string name="password">Pasahitza</string>
+    <string name="token">Tokena (pasahitzaren ordez)</string>
+    <string name="token_hint">Sortu ezazu webean: Ezarpenak › Hobespenak</string>
+    <string name="not_set">Ezarri gabe</string>
+    <string name="save">Gorde</string>
+    <string name="clear">Garbitu</string>
+
+    <string name="devices">Gailuak</string>
+    <string name="no_devices">Gailurik ez</string>
+    <string name="device_not_found">Gailua ez da aurkitu</string>
+    <string name="unknown_device">Gailu ezezaguna</string>
+    <string name="refresh">Eguneratu</string>
+    <string name="settings">Ezarpenak</string>
+    <string name="status_online">Konektatuta</string>
+    <string name="status_offline">Deskonektatuta</string>
+    <string name="status_unknown">Ezezaguna</string>
+    <string name="open_map">Ireki mapa</string>
+    <string name="opened_on_phone">Telefonoan irekita</string>
+    <string name="show_in_tile">Gehitu gogokoetara</string>
+    <string name="remove_from_tile">Kendu gogokoetatik</string>
+
+    <string name="notifications">Abisuak</string>
+    <string name="notifications_off">Desaktibatuta</string>
+    <string name="notifications_away">Telefonoa urruti dagoenean soilik (15 minuturo egiaztatzen du)</string>
+    <string name="notifications_always">Beti (15 minuturo egiaztatzen du)</string>
+
+    <string name="map_type">Mapa</string>
+    <string name="map_buttons_autohide">Ezkutatu mapako botoiak</string>
+    <string name="map_buttons_autohide_summary">Geldirik daudenean ezkutatzen dira; ukitu pantaila ikusteko</string>
+    <string name="map_server">Zerbitzariarena bera</string>
+    <string name="map_server_named">Zerbitzariarena bera (%1$s)</string>
+    <string name="map_no_key">Gakorik ez</string>
+    <string name="map_needs_key">%1$s behar du Traccar-en</string>
+    <string name="map_keys_hint">Gakoak zure Traccar hobespenetatik edo zerbitzariarenetatik irakurtzen dira, webak erabiltzen dituen izen berberekin.</string>
+    <string name="channel_events">Zerbitzariaren gertaerak</string>
+
+    <string name="error_unauthorized">Kredentzial okerrak edo saioa iraungita</string>
+    <string name="error_network">Ezin da zerbitzariarekin konektatu</string>
+    <string name="error_http">Zerbitzariaren errorea (%1$d)</string>
+    <string name="error_url">Zerbitzariaren URL baliogabea</string>
+    <string name="error_response">Zerbitzariaren ustekabeko erantzuna</string>
+
+    <string name="event_device_online">Konektatuta</string>
+    <string name="event_device_offline">Deskonektatuta</string>
+    <string name="event_device_unknown">Egoera ezezaguna</string>
+    <string name="event_device_moving">Mugitzen hasi da</string>
+    <string name="event_device_stopped">Geldituta</string>
+    <string name="event_device_overspeed">Abiadura-muga gainditu da</string>
+    <string name="event_fuel_drop">Erregaiaren jaitsiera</string>
+    <string name="event_fuel_increase">Erregaiaren igoera</string>
+    <string name="event_geofence_enter">%1$s eremuan sartu da</string>
+    <string name="event_geofence_exit">%1$s eremutik irten da</string>
+    <string name="event_geofence_fallback">geobarrera bat</string>
+    <string name="event_ignition_on">Kontaktua piztuta</string>
+    <string name="event_ignition_off">Kontaktua itzalita</string>
+    <string name="event_maintenance">Mantentze-lanak behar dira</string>
+    <string name="event_text_message">Testu-mezua jaso da</string>
+    <string name="event_driver_changed">Gidariaren aldaketa</string>
+    <string name="event_alarm">Alarma: %1$s</string>
+</resources>

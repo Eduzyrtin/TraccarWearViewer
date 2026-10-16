@@ -5,6 +5,8 @@ import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.contentOrNull
 import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.FormBody
@@ -12,6 +14,7 @@ import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import io.github.eduzyrtin.traccarwear.viewer.map.MapType
 import java.io.IOException
 import java.time.Instant
 import java.time.temporal.ChronoUnit
@@ -20,7 +23,12 @@ import java.util.concurrent.TimeUnit
 // Solo los campos que usa la app; el resto se ignora (ignoreUnknownKeys)
 
 @Serializable
-data class User(val id: Long, val name: String = "", val email: String = "")
+data class User(
+    val id: Long,
+    val name: String = "",
+    val email: String = "",
+    val attributes: JsonObject = JsonObject(emptyMap()),
+)
 
 @Serializable
 data class Device(
@@ -60,6 +68,18 @@ data class NotificationRule(val id: Long, val type: String)
 @Serializable
 data class Geofence(val id: Long, val name: String)
 
+@Serializable
+data class ServerInfo(
+    val map: String? = null,
+    val mapUrl: String? = null,
+    val attributes: JsonObject = JsonObject(emptyMap()),
+)
+
+// Claves de mapas presentes en unas preferencias de Traccar (mismos nombres que en la web)
+fun JsonObject.mapKeys(): Map<String, String> = MapType.KEY_ATTRIBUTES.mapNotNull { name ->
+    (this[name] as? JsonPrimitive)?.contentOrNull?.takeIf { it.isNotBlank() }?.let { name to it }
+}.toMap()
+
 class UnauthorizedException : IOException("Unauthorized")
 
 class HttpException(val code: Int) : IOException("HTTP $code")
@@ -67,7 +87,10 @@ class HttpException(val code: Int) : IOException("HTTP $code")
 /** API REST de Traccar 6 autenticada con token (Authorization: Bearer). */
 class TraccarApi(val serverUrl: String, private val token: String) {
 
-    suspend fun user(): User = get("api/session")
+    suspend fun server(): ServerInfo = get("api/server")
+
+    // GET /api/session (sin id) no admite token Bearer; con id sí
+    suspend fun user(id: Long): User = get("api/session/$id")
 
     suspend fun devices(): List<Device> = get("api/devices")
 
@@ -135,7 +158,7 @@ class TraccarApi(val serverUrl: String, private val token: String) {
          * Abre una sesión con correo y contraseña solo para pedir un token de larga duración.
          * La contraseña no se guarda en el reloj.
          */
-        suspend fun requestToken(serverUrl: String, email: String, password: String): String =
+        suspend fun requestToken(serverUrl: String, email: String, password: String): Pair<String, User> =
             withContext(Dispatchers.IO) {
                 val loginClient = client.newBuilder().cookieJar(MemoryCookieJar()).build()
                 val base = serverUrl.toHttpUrl()
@@ -143,9 +166,10 @@ class TraccarApi(val serverUrl: String, private val token: String) {
                     .url(base.newBuilder().addPathSegments("api/session").build())
                     .post(FormBody.Builder().add("email", email).add("password", password).build())
                     .build()
-                loginClient.newCall(login).execute().use { response ->
+                val user = loginClient.newCall(login).execute().use { response ->
                     if (response.code == 401) throw UnauthorizedException()
                     if (!response.isSuccessful) throw HttpException(response.code)
+                    json.decodeFromString<User>(response.body.string())
                 }
                 val expiration = Instant.now().plus(TOKEN_DAYS, ChronoUnit.DAYS).toString()
                 val tokenRequest = Request.Builder()
@@ -155,7 +179,7 @@ class TraccarApi(val serverUrl: String, private val token: String) {
                 loginClient.newCall(tokenRequest).execute().use { response ->
                     if (!response.isSuccessful) throw HttpException(response.code)
                     response.body.string().trim()
-                }
+                }.let { it to user }
             }
     }
 }

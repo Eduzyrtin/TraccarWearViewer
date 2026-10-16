@@ -42,12 +42,6 @@ fun LoginScreen(viewModel: ViewerViewModel, onEdit: (LoginField) -> Unit) {
                     form.password.ifEmpty { notSet },
                 ) { onEdit(LoginField.PASSWORD) }
             }
-            item {
-                FieldButton(
-                    stringResource(R.string.token),
-                    form.token.ifEmpty { stringResource(R.string.optional) },
-                ) { onEdit(LoginField.TOKEN) }
-            }
             error?.let { message ->
                 item {
                     Text(

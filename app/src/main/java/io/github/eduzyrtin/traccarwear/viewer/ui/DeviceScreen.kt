@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.core.net.toUri
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.wear.compose.foundation.lazy.TransformingLazyColumn
 import androidx.wear.compose.foundation.lazy.rememberTransformingLazyColumnState
@@ -90,12 +91,12 @@ private fun CenteredText(text: String, secondary: Boolean = false) {
 // Mapa en el reloj si hay alguna app que lo abra; si no, en el teléfono
 private fun openMap(context: Context, name: String, position: Position) {
     val coordinates = "${position.latitude},${position.longitude}"
-    val geo = Intent(Intent.ACTION_VIEW, Uri.parse("geo:$coordinates?q=$coordinates(${Uri.encode(name)})"))
+    val geo = Intent(Intent.ACTION_VIEW, "geo:$coordinates?q=$coordinates(${Uri.encode(name)})".toUri())
     if (geo.resolveActivity(context.packageManager) != null) {
         context.startActivity(geo)
         return
     }
-    val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/?api=1&query=$coordinates"))
+    val web = Intent(Intent.ACTION_VIEW, "https://www.google.com/maps/search/?api=1&query=$coordinates".toUri())
         .addCategory(Intent.CATEGORY_BROWSABLE)
     RemoteActivityHelper(context).startRemoteActivity(web)
     Toast.makeText(context, R.string.opened_on_phone, Toast.LENGTH_SHORT).show()

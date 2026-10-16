@@ -6,7 +6,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.input.InputTransformation
 import androidx.compose.foundation.text.input.TextFieldLineLimits
+import androidx.compose.foundation.text.input.clearText
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.Composable
@@ -19,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.wear.compose.foundation.lazy.TransformingLazyColumn
 import androidx.wear.compose.foundation.lazy.rememberTransformingLazyColumnState
 import androidx.wear.compose.material3.Button
+import androidx.wear.compose.material3.ButtonDefaults
 import androidx.wear.compose.material3.ListHeader
 import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.compose.material3.ScreenScaffold
@@ -57,6 +60,8 @@ fun TextInputScreen(
                     BasicTextField(
                         state = state,
                         lineLimits = TextFieldLineLimits.MultiLine(minHeightInLines = 1, maxHeightInLines = 4),
+                        // Se ve en varias líneas, pero es un único valor: Enter no mete saltos de línea
+                        inputTransformation = NoLineBreaks,
                         textStyle = MaterialTheme.typography.bodyMedium.copy(color = MaterialTheme.colorScheme.onSurface),
                         cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
                         keyboardOptions = KeyboardOptions(keyboardType = keyboardType, imeAction = ImeAction.Done),
@@ -72,8 +77,23 @@ fun TextInputScreen(
                     label = { Text(stringResource(R.string.save)) },
                 )
             }
+            // Borrar letra a letra en el reloj es un suplicio
+            item {
+                Button(
+                    onClick = { state.clearText() },
+                    colors = ButtonDefaults.filledTonalButtonColors(),
+                    modifier = Modifier.fillMaxWidth(),
+                    label = { Text(stringResource(R.string.clear)) },
+                )
+            }
         }
     }
 }
 
 private fun CharSequence.singleLine(): String = filterNot { it == '\n' }.toString()
+
+private val NoLineBreaks = InputTransformation {
+    for (i in length - 1 downTo 0) {
+        if (charAt(i) == '\n') replace(i, i + 1, "")
+    }
+}

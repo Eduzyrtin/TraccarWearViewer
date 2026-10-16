@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tile_label">Mapa Traccar</string>
+    <string name="tile_sign_in">Obre l\'app per iniciar sessió</string>
+    <string name="tile_choose_device">Dispositiu del mosaic</string>
+    <string name="no_positions">Encara no hi ha posicions</string>
+
+    <string name="sign_in">Inicia la sessió</string>
+    <string name="sign_out">Tanca la sessió</string>
+    <string name="server_url">URL del servidor</string>
+    <string name="email">Correu</string>
+    <string name="email_hint">nom@exemple.com</string>
+    <string name="password">Contrasenya</string>
+    <string name="token">Token (en lloc de la contrasenya)</string>
+    <string name="token_hint">Crea\'l al web: Configuració › Preferències</string>
+    <string name="not_set">Sense configurar</string>
+    <string name="save">Desa</string>
+    <string name="clear">Esborra</string>
+
+    <string name="devices">Dispositius</string>
+    <string name="no_devices">Sense dispositius</string>
+    <string name="device_not_found">Dispositiu no trobat</string>
+    <string name="unknown_device">Dispositiu desconegut</string>
+    <string name="refresh">Actualitza</string>
+    <string name="settings">Configuració</string>
+    <string name="status_online">En línia</string>
+    <string name="status_offline">Fora de línia</string>
+    <string name="status_unknown">Desconegut</string>
+    <string name="open_map">Obre el mapa</string>
+    <string name="opened_on_phone">Obert al telèfon</string>
+    <string name="show_in_tile">Afegeix a preferits</string>
+    <string name="remove_from_tile">Treu de preferits</string>
+
+    <string name="notifications">Avisos</string>
+    <string name="notifications_off">Desactivats</string>
+    <string name="notifications_away">Només amb el mòbil lluny (cada 15 min)</string>
+    <string name="notifications_always">Sempre (cada 15 min)</string>
+
+    <string name="map_type">Mapa</string>
+    <string name="map_buttons_autohide">Amaga els botons del mapa</string>
+    <string name="map_buttons_autohide_summary">S\'amaguen en repòs; toca la pantalla per veure\'ls</string>
+    <string name="map_server">El del servidor</string>
+    <string name="map_server_named">El del servidor (%1$s)</string>
+    <string name="map_no_key">Sense clau</string>
+    <string name="map_needs_key">Necessita %1$s a Traccar</string>
+    <string name="map_keys_hint">Les claus es llegeixen de les teves preferències de Traccar o de les del servidor, amb els mateixos noms que fa servir el web.</string>
+    <string name="channel_events">Esdeveniments del servidor</string>
+
+    <string name="error_unauthorized">Credencials incorrectes o sessió caducada</string>
+    <string name="error_network">No es pot connectar amb el servidor</string>
+    <string name="error_http">Error del servidor (%1$d)</string>
+    <string name="error_url">URL del servidor no vàlida</string>
+    <string name="error_response">Resposta inesperada del servidor</string>
+
+    <string name="event_device_online">En línia</string>
+    <string name="event_device_offline">Fora de línia</string>
+    <string name="event_device_unknown">Estat desconegut</string>
+    <string name="event_device_moving">Ha començat a moure\'s</string>
+    <string name="event_device_stopped">Aturat</string>
+    <string name="event_device_overspeed">Límit de velocitat superat</string>
+    <string name="event_fuel_drop">Baixada de combustible</string>
+    <string name="event_fuel_increase">Pujada de combustible</string>
+    <string name="event_geofence_enter">Ha entrat a %1$s</string>
+    <string name="event_geofence_exit">Ha sortit de %1$s</string>
+    <string name="event_geofence_fallback">una geobarrera</string>
+    <string name="event_ignition_on">Contacte encès</string>
+    <string name="event_ignition_off">Contacte apagat</string>
+    <string name="event_maintenance">Manteniment pendent</string>
+    <string name="event_text_message">Missatge de text rebut</string>
+    <string name="event_driver_changed">Canvi de conductor</string>
+    <string name="event_alarm">Alarma: %1$s</string>
+</resources>

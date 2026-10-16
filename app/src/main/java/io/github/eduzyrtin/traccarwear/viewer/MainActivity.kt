@@ -1,7 +1,9 @@
 package io.github.eduzyrtin.traccarwear.viewer
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.viewModels
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.material3.AppScaffold
 import androidx.wear.compose.material3.CircularProgressIndicator
 import androidx.wear.compose.material3.MaterialTheme
@@ -25,20 +26,40 @@ import io.github.eduzyrtin.traccarwear.viewer.ui.DeviceScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.DevicesScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.LoginField
 import io.github.eduzyrtin.traccarwear.viewer.ui.LoginScreen
+import io.github.eduzyrtin.traccarwear.viewer.ui.MapScreen
+import io.github.eduzyrtin.traccarwear.viewer.ui.MapTypeScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.SettingsScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.TextInputScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.ViewerViewModel
 
 class MainActivity : ComponentActivity() {
 
+    private val viewModel: ViewerViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { ViewerApp() }
+        selectFrom(intent)
+        setContent { ViewerApp(viewModel) }
+    }
+
+    // Abierta desde el tile: centrar el mapa en ese dispositivo
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        selectFrom(intent)
+    }
+
+    private fun selectFrom(intent: Intent) {
+        val deviceId = intent.getLongExtra(EXTRA_DEVICE_ID, -1L)
+        if (deviceId >= 0) viewModel.select(deviceId)
+    }
+
+    companion object {
+        const val EXTRA_DEVICE_ID = "device_id"
     }
 }
 
 @Composable
-private fun ViewerApp(viewModel: ViewerViewModel = viewModel()) {
+private fun ViewerApp(viewModel: ViewerViewModel) {
     val accountState by viewModel.accountState.collectAsStateWithLifecycle()
     MaterialTheme {
         AppScaffold {
@@ -86,11 +107,22 @@ private fun LoginNavigation(viewModel: ViewerViewModel) {
 @Composable
 private fun MainNavigation(viewModel: ViewerViewModel, account: Account) {
     val navController = rememberSwipeDismissableNavController()
-    SwipeDismissableNavHost(navController = navController, startDestination = "devices") {
+    SwipeDismissableNavHost(navController = navController, startDestination = "map") {
+        composable("map") {
+            MapScreen(
+                viewModel,
+                onOpenList = { navController.navigate("devices") },
+                onOpenDevice = { id -> navController.navigate("device/$id") },
+            )
+        }
+        // Elegir en la lista vuelve al mapa centrado en ese dispositivo
         composable("devices") {
             DevicesScreen(
                 viewModel,
-                onOpenDevice = { id -> navController.navigate("device/$id") },
+                onOpenDevice = { id ->
+                    viewModel.select(id)
+                    navController.popBackStack("map", inclusive = false)
+                },
                 onOpenSettings = { navController.navigate("settings") },
             )
         }
@@ -99,7 +131,10 @@ private fun MainNavigation(viewModel: ViewerViewModel, account: Account) {
             DeviceScreen(viewModel, id)
         }
         composable("settings") {
-            SettingsScreen(viewModel, account)
+            SettingsScreen(viewModel, account, onOpenMaps = { navController.navigate("maps") })
+        }
+        composable("maps") {
+            MapTypeScreen(viewModel, onDone = { navController.popBackStack() })
         }
     }
 }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tile_label">Carte Traccar</string>
+    <string name="tile_sign_in">Ouvrez l\'appli pour vous connecter</string>
+    <string name="tile_choose_device">Appareil de cette tuile</string>
+    <string name="no_positions">Aucune position pour l\'instant</string>
+
+    <string name="sign_in">Se connecter</string>
+    <string name="sign_out">Se déconnecter</string>
+    <string name="server_url">URL du serveur</string>
+    <string name="email">E-mail</string>
+    <string name="email_hint">nom@exemple.com</string>
+    <string name="password">Mot de passe</string>
+    <string name="token">Jeton (au lieu du mot de passe)</string>
+    <string name="token_hint">Créez-le sur le web : Réglages › Préférences</string>
+    <string name="not_set">Non défini</string>
+    <string name="save">Enregistrer</string>
+    <string name="clear">Effacer</string>
+
+    <string name="devices">Appareils</string>
+    <string name="no_devices">Aucun appareil</string>
+    <string name="device_not_found">Appareil introuvable</string>
+    <string name="unknown_device">Appareil inconnu</string>
+    <string name="refresh">Actualiser</string>
+    <string name="settings">Réglages</string>
+    <string name="status_online">En ligne</string>
+    <string name="status_offline">Hors ligne</string>
+    <string name="status_unknown">Inconnu</string>
+    <string name="open_map">Ouvrir la carte</string>
+    <string name="opened_on_phone">Ouvert sur le téléphone</string>
+    <string name="show_in_tile">Ajouter aux favoris</string>
+    <string name="remove_from_tile">Retirer des favoris</string>
+
+    <string name="notifications">Alertes</string>
+    <string name="notifications_off">Désactivées</string>
+    <string name="notifications_away">Seulement quand le téléphone est loin (toutes les 15 min)</string>
+    <string name="notifications_always">Toujours (toutes les 15 min)</string>
+
+    <string name="map_type">Carte</string>
+    <string name="map_buttons_autohide">Masquer les boutons de la carte</string>
+    <string name="map_buttons_autohide_summary">Masqués au repos ; touchez l\'écran pour les afficher</string>
+    <string name="map_server">Comme le serveur</string>
+    <string name="map_server_named">Comme le serveur (%1$s)</string>
+    <string name="map_no_key">Aucune clé requise</string>
+    <string name="map_needs_key">Nécessite %1$s dans Traccar</string>
+    <string name="map_keys_hint">Les clés sont lues dans vos préférences Traccar ou dans celles du serveur, avec les mêmes noms que l\'appli web.</string>
+    <string name="channel_events">Événements du serveur</string>
+
+    <string name="error_unauthorized">Identifiants incorrects ou session expirée</string>
+    <string name="error_network">Impossible de se connecter au serveur</string>
+    <string name="error_http">Erreur du serveur (%1$d)</string>
+    <string name="error_url">URL du serveur non valide</string>
+    <string name="error_response">Réponse inattendue du serveur</string>
+
+    <string name="event_device_online">En ligne</string>
+    <string name="event_device_offline">Hors ligne</string>
+    <string name="event_device_unknown">État inconnu</string>
+    <string name="event_device_moving">En mouvement</string>
+    <string name="event_device_stopped">Arrêté</string>
+    <string name="event_device_overspeed">Excès de vitesse</string>
+    <string name="event_fuel_drop">Baisse de carburant</string>
+    <string name="event_fuel_increase">Hausse de carburant</string>
+    <string name="event_geofence_enter">Entré dans %1$s</string>
+    <string name="event_geofence_exit">Sorti de %1$s</string>
+    <string name="event_geofence_fallback">une géoclôture</string>
+    <string name="event_ignition_on">Contact mis</string>
+    <string name="event_ignition_off">Contact coupé</string>
+    <string name="event_maintenance">Entretien requis</string>
+    <string name="event_text_message">SMS reçu</string>
+    <string name="event_driver_changed">Changement de conducteur</string>
+    <string name="event_alarm">Alarme : %1$s</string>
+</resources>

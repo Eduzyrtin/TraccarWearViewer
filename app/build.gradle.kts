@@ -1,8 +1,17 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
 }
+
+val testDefaults = Properties().apply {
+    val file = rootProject.file("test-defaults.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+
+fun quoted(key: String) = "\"" + testDefaults.getProperty(key, "").replace("\\", "\\\\").replace("\"", "\\\"") + "\""
 
 android {
     namespace = "io.github.eduzyrtin.traccarwear.viewer"
@@ -17,7 +26,21 @@ android {
         versionName = "0.1.0"
     }
 
+    buildTypes {
+        debug {
+            buildConfigField("String", "TEST_SERVER", quoted("server"))
+            buildConfigField("String", "TEST_EMAIL", quoted("email"))
+            buildConfigField("String", "TEST_PASSWORD", quoted("password"))
+        }
+        release {
+            buildConfigField("String", "TEST_SERVER", "\"\"")
+            buildConfigField("String", "TEST_EMAIL", "\"\"")
+            buildConfigField("String", "TEST_PASSWORD", "\"\"")
+        }
+    }
+
     buildFeatures {
+        buildConfig = true
         compose = true
     }
 
@@ -40,6 +63,7 @@ dependencies {
     implementation(libs.androidx.wear.protolayout)
     implementation(libs.androidx.wear.protolayout.material3)
     implementation(libs.androidx.wear.remote.interactions)
+    implementation(libs.androidx.concurrent.futures.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.datastore.preferences)

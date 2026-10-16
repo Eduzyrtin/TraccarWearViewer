@@ -10,6 +10,7 @@ import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import io.github.eduzyrtin.traccarwear.viewer.PhoneProximity
 import io.github.eduzyrtin.traccarwear.viewer.api.UnauthorizedException
+import io.github.eduzyrtin.traccarwear.viewer.data.NotificationMode
 import io.github.eduzyrtin.traccarwear.viewer.data.ViewerRepository
 import io.github.eduzyrtin.traccarwear.viewer.data.ViewerStore
 import kotlinx.coroutines.flow.first
@@ -19,19 +20,21 @@ import java.time.Instant
 import java.util.concurrent.TimeUnit
 
 /**
- * Avisos propios del reloj, solo cuando el teléfono no está cerca (con él cerca ya avisa la
- * Traccar Manager oficial del móvil). Consulta los eventos del servidor de los tipos que el usuario
+ * Avisos propios del reloj, según el modo elegido en Ajustes: siempre, o solo cuando el teléfono
+ * no está cerca (con él cerca ya avisa la Traccar Manager oficial del móvil). Consulta los eventos del servidor de los tipos que el usuario
  * tiene configurados como notificación. No necesita configurar nada en el servidor ni Firebase.
  */
 class EventsWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
 
     override suspend fun doWork(): Result {
         val context = applicationContext
-        if (!ViewerStore.notificationsEnabled(context).first()) return Result.success()
+        val mode = ViewerStore.notificationMode(context).first()
+        if (mode == NotificationMode.OFF) return Result.success()
         val api = ViewerRepository.api(context) ?: return Result.success()
         val now = Instant.now()
         val lastCheck = ViewerStore.lastEventCheck(context)
-        if (lastCheck == null || PhoneProximity.isNearby(context)) {
+        // En modo "lejos del móvil", con el teléfono cerca ya avisa la Traccar Manager oficial
+        if (lastCheck == null || (mode == NotificationMode.AWAY_FROM_PHONE && PhoneProximity.isNearby(context))) {
             ViewerStore.setLastEventCheck(context, now.toEpochMilli())
             return Result.success()
         }

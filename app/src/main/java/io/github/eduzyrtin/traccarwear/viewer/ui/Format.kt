@@ -28,3 +28,10 @@ fun statusLabel(status: String?): Int = when (status) {
 }
 
 fun knotsToKmh(knots: Double): Int = (knots * 1.852).roundToInt()
+
+// Colores de estado comunes al mapa de la app y al del tile
+fun statusColor(status: String?): Int = when (status) {
+    "online" -> 0xFF2E7D32.toInt()
+    "offline" -> 0xFFC62828.toInt()
+    else -> 0xFF757575.toInt()
+}

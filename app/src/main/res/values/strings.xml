@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Viewer for Traccar</string>
-    <string name="tile_label">Traccar devices</string>
-    <string name="tile_title">Devices</string>
+    <string name="app_name" translatable="false">Viewer for Traccar</string>
+    <string name="tile_label">Traccar map</string>
     <string name="tile_sign_in">Open the app to sign in</string>
+    <string name="tile_choose_device">Device for this tile</string>
+    <string name="no_positions">No positions yet</string>
 
     <string name="sign_in">Sign in</string>
     <string name="sign_out">Sign out</string>
     <string name="server_url">Server URL</string>
-    <string name="server_url_hint">https://demo.traccar.org</string>
+    <string name="server_url_hint" translatable="false">https://demo.traccar.org</string>
     <string name="email">Email</string>
     <string name="email_hint">name@example.com</string>
     <string name="password">Password</string>
     <string name="token">Token (instead of password)</string>
     <string name="token_hint">Create it on the web: Settings › Preferences</string>
-    <string name="optional">Optional</string>
     <string name="not_set">Not set</string>
     <string name="save">Save</string>
+    <string name="clear">Clear</string>
 
     <string name="devices">Devices</string>
     <string name="no_devices">No devices</string>
@@ -27,14 +28,25 @@
     <string name="status_online">Online</string>
     <string name="status_offline">Offline</string>
     <string name="status_unknown">Unknown</string>
-    <string name="speed">%1$d km/h</string>
+    <string name="speed" translatable="false">%1$d km/h</string>
     <string name="open_map">Open map</string>
     <string name="opened_on_phone">Opened on the phone</string>
-    <string name="show_in_tile">Show in tile</string>
-    <string name="remove_from_tile">Remove from tile</string>
+    <string name="show_in_tile">Add to favorites</string>
+    <string name="remove_from_tile">Remove from favorites</string>
 
-    <string name="notifications_away">Alerts away from phone</string>
-    <string name="notifications_away_summary">When the phone is not nearby, checks the server every 15 min</string>
+    <string name="notifications">Alerts</string>
+    <string name="notifications_off">Off</string>
+    <string name="notifications_away">Only when the phone is not nearby (checks every 15 min)</string>
+    <string name="notifications_always">Always (checks every 15 min)</string>
+
+    <string name="map_type">Map</string>
+    <string name="map_buttons_autohide">Hide map buttons</string>
+    <string name="map_buttons_autohide_summary">Hidden when idle; touch the screen to show them</string>
+    <string name="map_server">Same as the server</string>
+    <string name="map_server_named">Same as the server (%1$s)</string>
+    <string name="map_no_key">No key needed</string>
+    <string name="map_needs_key">Needs %1$s in Traccar</string>
+    <string name="map_keys_hint">Keys are read from your Traccar preferences or the server settings, using the same names as the web app.</string>
     <string name="channel_events">Server events</string>
 
     <string name="error_unauthorized">Wrong credentials or expired session</string>

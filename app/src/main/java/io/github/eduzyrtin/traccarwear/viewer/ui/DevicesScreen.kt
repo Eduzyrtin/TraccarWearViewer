@@ -31,26 +31,12 @@ import io.github.eduzyrtin.traccarwear.viewer.api.Device
 
 @Composable
 fun DevicesScreen(viewModel: ViewerViewModel, onOpenDevice: (Long) -> Unit, onOpenSettings: () -> Unit) {
-    val context = LocalContext.current
     val snapshot by viewModel.snapshot.collectAsStateWithLifecycle()
     val favorites by viewModel.favorites.collectAsStateWithLifecycle()
     val busy by viewModel.busy.collectAsStateWithLifecycle()
     val error by viewModel.error.collectAsStateWithLifecycle()
-    val notificationsEnabled by viewModel.notificationsEnabled.collectAsStateWithLifecycle()
 
-    // Los avisos vienen activados por defecto: pedir el permiso la primera vez que se entra
-    val notificationPermission = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission(),
-    ) { granted -> if (!granted) viewModel.setNotificationsEnabled(false) }
-    LaunchedEffect(Unit) {
-        viewModel.refresh()
-        val needsPermission = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-            ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) !=
-            PackageManager.PERMISSION_GRANTED
-        if (notificationsEnabled && needsPermission) {
-            notificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
-        }
-    }
+    LaunchedEffect(Unit) { viewModel.refresh() }
 
     val devices = snapshot?.devices.orEmpty()
         .sortedWith(compareByDescending<Device> { it.id in favorites }.thenBy { it.name.lowercase() })
@@ -104,3 +90,4 @@ fun DevicesScreen(viewModel: ViewerViewModel, onOpenDevice: (Long) -> Unit, onOp
         }
     }
 }
+

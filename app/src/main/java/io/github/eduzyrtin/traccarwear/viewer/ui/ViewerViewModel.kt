@@ -3,13 +3,16 @@ package io.github.eduzyrtin.traccarwear.viewer.ui
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import io.github.eduzyrtin.traccarwear.viewer.BuildConfig
 import io.github.eduzyrtin.traccarwear.viewer.R
 import io.github.eduzyrtin.traccarwear.viewer.api.HttpException
 import io.github.eduzyrtin.traccarwear.viewer.api.UnauthorizedException
 import io.github.eduzyrtin.traccarwear.viewer.data.Account
+import io.github.eduzyrtin.traccarwear.viewer.data.NotificationMode
 import io.github.eduzyrtin.traccarwear.viewer.data.Snapshot
 import io.github.eduzyrtin.traccarwear.viewer.data.ViewerRepository
 import io.github.eduzyrtin.traccarwear.viewer.data.ViewerStore
+import io.github.eduzyrtin.traccarwear.viewer.map.MapType
 import io.github.eduzyrtin.traccarwear.viewer.notify.EventsWorker
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -69,10 +72,16 @@ class ViewerViewModel(application: Application) : AndroidViewModel(application) 
     val favorites: StateFlow<Set<Long>> = ViewerStore.favorites(application)
         .stateIn(viewModelScope, SharingStarted.Eagerly, emptySet())
 
-    val notificationsEnabled: StateFlow<Boolean> = ViewerStore.notificationsEnabled(application)
+    val notificationMode: StateFlow<NotificationMode> = ViewerStore.notificationMode(application)
+        .stateIn(viewModelScope, SharingStarted.Eagerly, NotificationMode.OFF)
+
+    val autoHideMapControls: StateFlow<Boolean> = ViewerStore.autoHideMapControls(application)
         .stateIn(viewModelScope, SharingStarted.Eagerly, true)
 
-    private val _loginForm = MutableStateFlow(LoginForm())
+    val mapChoice: StateFlow<String> = ViewerStore.mapChoice(application)
+        .stateIn(viewModelScope, SharingStarted.Eagerly, MapType.SERVER.id)
+
+    private val _loginForm = MutableStateFlow(testLoginForm())
     val loginForm: StateFlow<LoginForm> = _loginForm.asStateFlow()
 
     private val _busy = MutableStateFlow(false)
@@ -97,6 +106,14 @@ class ViewerViewModel(application: Application) : AndroidViewModel(application) 
 
     fun refresh() = launchBusy { ViewerRepository.refresh(app) }
 
+    // Dispositivo destacado en el mapa (tocado en el mapa, elegido en la lista o abierto desde el tile)
+    private val _selectedDeviceId = MutableStateFlow<Long?>(null)
+    val selectedDeviceId: StateFlow<Long?> = _selectedDeviceId.asStateFlow()
+
+    fun select(deviceId: Long?) {
+        _selectedDeviceId.value = deviceId
+    }
+
     fun toggleFavorite(deviceId: Long) {
         viewModelScope.launch {
             ViewerStore.toggleFavorite(app, deviceId)
@@ -104,10 +121,21 @@ class ViewerViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun setNotificationsEnabled(enabled: Boolean) {
+    fun setNotificationMode(mode: NotificationMode) {
         viewModelScope.launch {
-            ViewerStore.setNotificationsEnabled(app, enabled)
-            if (enabled) EventsWorker.schedule(app) else EventsWorker.cancel(app)
+            ViewerStore.setNotificationMode(app, mode)
+            if (mode == NotificationMode.OFF) EventsWorker.cancel(app) else EventsWorker.schedule(app)
+        }
+    }
+
+    fun setAutoHideMapControls(enabled: Boolean) {
+        viewModelScope.launch { ViewerStore.setAutoHideMapControls(app, enabled) }
+    }
+
+    fun setMapChoice(id: String) {
+        viewModelScope.launch {
+            ViewerStore.setMapChoice(app, id)
+            ViewerRepository.requestTileUpdate(app)
         }
     }
 
@@ -139,3 +167,10 @@ class ViewerViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 }
+
+// Solo en debug: valores de test-defaults.properties (no versionado). En release salen vacíos.
+private fun testLoginForm() = LoginForm(
+    server = BuildConfig.TEST_SERVER,
+    email = BuildConfig.TEST_EMAIL,
+    password = BuildConfig.TEST_PASSWORD,
+)

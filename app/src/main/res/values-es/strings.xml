@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="tile_label">Dispositivos Traccar</string>
-    <string name="tile_title">Dispositivos</string>
+    <string name="tile_label">Mapa Traccar</string>
     <string name="tile_sign_in">Abre la app para iniciar sesión</string>
+    <string name="tile_choose_device">Dispositivo del tile</string>
+    <string name="no_positions">Aún no hay posiciones</string>
 
     <string name="sign_in">Iniciar sesión</string>
     <string name="sign_out">Cerrar sesión</string>
@@ -12,9 +13,9 @@
     <string name="password">Contraseña</string>
     <string name="token">Token (en vez de contraseña)</string>
     <string name="token_hint">Créalo en la web: Ajustes › Preferencias</string>
-    <string name="optional">Opcional</string>
     <string name="not_set">Sin configurar</string>
     <string name="save">Guardar</string>
+    <string name="clear">Borrar</string>
 
     <string name="devices">Dispositivos</string>
     <string name="no_devices">Sin dispositivos</string>
@@ -27,11 +28,22 @@
     <string name="status_unknown">Desconocido</string>
     <string name="open_map">Abrir mapa</string>
     <string name="opened_on_phone">Abierto en el teléfono</string>
-    <string name="show_in_tile">Mostrar en el tile</string>
-    <string name="remove_from_tile">Quitar del tile</string>
+    <string name="show_in_tile">Añadir a favoritos</string>
+    <string name="remove_from_tile">Quitar de favoritos</string>
 
-    <string name="notifications_away">Avisos lejos del móvil</string>
-    <string name="notifications_away_summary">Con el móvil lejos, consulta el servidor cada 15 min</string>
+    <string name="notifications">Avisos</string>
+    <string name="notifications_off">Desactivados</string>
+    <string name="notifications_away">Solo con el móvil lejos (cada 15 min)</string>
+    <string name="notifications_always">Siempre (cada 15 min)</string>
+
+    <string name="map_type">Mapa</string>
+    <string name="map_buttons_autohide">Ocultar botones del mapa</string>
+    <string name="map_buttons_autohide_summary">Se ocultan en reposo; toca la pantalla para verlos</string>
+    <string name="map_server">El del servidor</string>
+    <string name="map_server_named">El del servidor (%1$s)</string>
+    <string name="map_no_key">Sin clave</string>
+    <string name="map_needs_key">Necesita %1$s en Traccar</string>
+    <string name="map_keys_hint">Las claves se leen de tus preferencias de Traccar o de las del servidor, con los mismos nombres que usa la web.</string>
     <string name="channel_events">Eventos del servidor</string>
 
     <string name="error_unauthorized">Credenciales incorrectas o sesión caducada</string>

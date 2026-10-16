@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tile_label">Traccar-Karte</string>
+    <string name="tile_sign_in">App öffnen, um sich anzumelden</string>
+    <string name="tile_choose_device">Gerät für diese Kachel</string>
+    <string name="no_positions">Noch keine Positionen</string>
+
+    <string name="sign_in">Anmelden</string>
+    <string name="sign_out">Abmelden</string>
+    <string name="server_url">Server-URL</string>
+    <string name="email">E-Mail</string>
+    <string name="email_hint">name@beispiel.de</string>
+    <string name="password">Passwort</string>
+    <string name="token">Token (statt Passwort)</string>
+    <string name="token_hint">Im Web erstellen: Einstellungen › Präferenzen</string>
+    <string name="not_set">Nicht festgelegt</string>
+    <string name="save">Speichern</string>
+    <string name="clear">Löschen</string>
+
+    <string name="devices">Geräte</string>
+    <string name="no_devices">Keine Geräte</string>
+    <string name="device_not_found">Gerät nicht gefunden</string>
+    <string name="unknown_device">Unbekanntes Gerät</string>
+    <string name="refresh">Aktualisieren</string>
+    <string name="settings">Einstellungen</string>
+    <string name="status_online">Online</string>
+    <string name="status_offline">Offline</string>
+    <string name="status_unknown">Unbekannt</string>
+    <string name="open_map">Karte öffnen</string>
+    <string name="opened_on_phone">Auf dem Handy geöffnet</string>
+    <string name="show_in_tile">Zu Favoriten hinzufügen</string>
+    <string name="remove_from_tile">Aus Favoriten entfernen</string>
+
+    <string name="notifications">Hinweise</string>
+    <string name="notifications_off">Aus</string>
+    <string name="notifications_away">Nur wenn das Handy nicht in der Nähe ist (Prüfung alle 15 Min.)</string>
+    <string name="notifications_always">Immer (Prüfung alle 15 Min.)</string>
+
+    <string name="map_type">Karte</string>
+    <string name="map_buttons_autohide">Kartenschaltflächen ausblenden</string>
+    <string name="map_buttons_autohide_summary">Im Ruhezustand ausgeblendet; Bildschirm berühren, um sie anzuzeigen</string>
+    <string name="map_server">Wie der Server</string>
+    <string name="map_server_named">Wie der Server (%1$s)</string>
+    <string name="map_no_key">Kein Schlüssel nötig</string>
+    <string name="map_needs_key">Benötigt %1$s in Traccar</string>
+    <string name="map_keys_hint">Die Schlüssel werden aus deinen Traccar-Präferenzen oder den Servereinstellungen gelesen, mit denselben Namen wie in der Web-App.</string>
+    <string name="channel_events">Serverereignisse</string>
+
+    <string name="error_unauthorized">Falsche Zugangsdaten oder abgelaufene Sitzung</string>
+    <string name="error_network">Verbindung zum Server nicht möglich</string>
+    <string name="error_http">Serverfehler (%1$d)</string>
+    <string name="error_url">Ungültige Server-URL</string>
+    <string name="error_response">Unerwartete Serverantwort</string>
+
+    <string name="event_device_online">Online</string>
+    <string name="event_device_offline">Offline</string>
+    <string name="event_device_unknown">Status unbekannt</string>
+    <string name="event_device_moving">Bewegung gestartet</string>
+    <string name="event_device_stopped">Gestoppt</string>
+    <string name="event_device_overspeed">Geschwindigkeitslimit überschritten</string>
+    <string name="event_fuel_drop">Kraftstoffabfall</string>
+    <string name="event_fuel_increase">Kraftstoffanstieg</string>
+    <string name="event_geofence_enter">%1$s betreten</string>
+    <string name="event_geofence_exit">%1$s verlassen</string>
+    <string name="event_geofence_fallback">eine Geofence</string>
+    <string name="event_ignition_on">Zündung an</string>
+    <string name="event_ignition_off">Zündung aus</string>
+    <string name="event_maintenance">Wartung erforderlich</string>
+    <string name="event_text_message">Textnachricht empfangen</string>
+    <string name="event_driver_changed">Fahrerwechsel</string>
+    <string name="event_alarm">Alarm: %1$s</string>
+</resources>

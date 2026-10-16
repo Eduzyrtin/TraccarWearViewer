@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Sin deslizar para cerrar: en el mapa, arrastrar a la derecha mueve el mapa en vez de salir -->
+    <style name="Theme.Viewer" parent="@android:style/Theme.DeviceDefault" tools:ignore="WearBackNavigation">
+        <item name="android:windowSwipeToDismiss">false</item>
+    </style>
+</resources>
