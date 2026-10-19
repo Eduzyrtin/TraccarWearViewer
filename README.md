@@ -1,6 +1,7 @@
 <!--
   TODO before going public:
   - Check the repository name in the badges and links (Eduzyrtin/TraccarWearViewer).
+  - Publish a first release so the "download" badge and the APK link work.
   - Check the Play Store link (the application id is com.sanabria.traccarwearosviewer) once the app is published.
 -->
 
@@ -30,9 +31,9 @@ No Firebase and nothing to configure on the server.
   </tr>
 </table>
 
-**[Get it on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** · [Getting started](#getting-started) · [Map types and API keys](#map-types-and-api-keys) · [FAQ](#faq)
+**[Get it on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** · **[Download the APK](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)** · [Getting started](#getting-started) · [Map types and API keys](#map-types-and-api-keys) · [FAQ](#faq)
 
-> **Free, only on Google Play.** It is not distributed through GitHub. **[Get Viewer for Traccar on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)**.
+> **Free, on Google Play and GitHub.** Viewer for Traccar is completely free. Install it from **[Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** for automatic updates, or download the APK from **[GitHub Releases](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)**. Same app either way.
 
 </div>
 
@@ -81,8 +82,8 @@ This is an independent project and is not affiliated with or endorsed by Traccar
 - A watch with **Wear OS 3 or newer** (API 30+), with Wi-Fi or LTE if you want it away from the phone.
 - A **Traccar 6** server you can reach from the watch.
 
-### 1 · Install from Google Play
-Install **[Viewer for Traccar](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** on the watch from the Play Store.
+### 1 · Install
+Get it from **[Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** on the watch, or download the latest `.apk` from **[Releases](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)** and install it with `adb install` over Wi-Fi debugging. Only install an APK from this repository's Releases page.
 
 ### 2 · Sign in
 Open the app, enter your **server URL**, **email** and **password**, and tap *Sign in*. You get a token valid for a year; the password is not kept.
@@ -198,7 +199,7 @@ Please open an **[issue](https://github.com/Eduzyrtin/TraccarWearViewer/issues)*
 
 ## Support the project
 
-Viewer for Traccar is a passion project and it is **free** on Google Play. If it is useful to you:
+Viewer for Traccar is a passion project and it is **free**, on Google Play and on GitHub. If it is useful to you:
 
 - ☕ **[Buy me a coffee on Ko-fi](https://ko-fi.com/Eduzyrtin)**
 - ▶️ **[Get it on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)**: automatic updates included.
