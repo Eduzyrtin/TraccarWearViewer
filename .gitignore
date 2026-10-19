@@ -12,3 +12,4 @@ build/
 .externalNativeBuild
 .cxx
 /test-defaults.properties
+/app/release/
