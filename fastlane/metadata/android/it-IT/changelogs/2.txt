@@ -1,0 +1,1 @@
+Stesse funzioni della 0.1.0, ripubblicata perché l'app sia disponibile su Google Play: segui un dispositivo, un riquadro mappa per dispositivo, avvisi facoltativi e nove lingue.

@@ -1,0 +1,1 @@
+Same features as 0.1.0, republished so the app is available on Google Play: follow a device, a map tile per device, optional alerts and nine languages.

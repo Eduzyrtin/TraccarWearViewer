@@ -24,3 +24,9 @@ Paquete `com.sanabria.traccarwearosviewer` · solo Wear OS · ficha en [`fastlan
 - **Marca**: la descripción dice que no está afiliada a Traccar. Mantén ese texto para evitar un rechazo por uso de marca.
 - **Enlace al repositorio**: la descripción apunta a `github.com/Eduzyrtin/TraccarWearViewer`. Si el repo sigue privado, quita
   la sección «FREE AND OPEN SOURCE» (y su traducción) de los 9 idiomas, o haz el repo público antes de publicar.
+
+## Versión 2 (0.1.1)
+
+La versión 1 (0.1.0) quedó como «sustituida por otra versión · sin publicar» tras el rechazo automático del primer envío y la
+producción de Wear OS seguía «inactiva». La 0.1.1 es la misma app con `versionCode` 2: súbela en *Producción (Wear OS) › Crear
+nueva versión* y envíala a revisión. Sus novedades están en `changelogs/2.txt` (9 idiomas).

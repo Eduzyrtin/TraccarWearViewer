@@ -1,0 +1,1 @@
+Mismas funciones que la 0.1.0, republicada para que la app esté disponible en Google Play: seguir un dispositivo, un tile de mapa por dispositivo, avisos opcionales y nueve idiomas.

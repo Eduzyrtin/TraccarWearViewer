@@ -1,0 +1,1 @@
+Mêmes fonctions que la 0.1.0, republiée pour que l'appli soit disponible sur Google Play : suivre un appareil, une tuile de carte par appareil, alertes facultatives et neuf langues.

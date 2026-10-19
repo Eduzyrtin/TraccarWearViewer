@@ -1,0 +1,1 @@
+Gleiche Funktionen wie 0.1.0, neu veröffentlicht, damit die App bei Google Play verfügbar ist: einem Gerät folgen, eine Karten-Kachel pro Gerät, optionale Hinweise und neun Sprachen.
