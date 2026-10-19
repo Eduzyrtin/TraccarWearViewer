@@ -1,0 +1,36 @@
+Viewer for Traccar muestra los dispositivos de tu propio servidor Traccar en un mapa, directamente en tu muñeca. Es un visor, no un gestor: hace un solo trabajo y lo hace bien en una pantalla redonda pequeña. Funciona con cualquier servidor Traccar 6 sin cambiar su configuración.
+
+UN MAPA, COMO EN LA APP WEB
+• Todos los dispositivos en un solo mapa, con el color de su estado: verde conectado, rojo desconectado, gris desconocido.
+• Zoom con la corona o el bisel, con los botones +/−, con doble toque o pellizco. Arrastra para moverte.
+• Toca un dispositivo para ver su estado, última actualización y velocidad.
+• Las posiciones se actualizan cada 30 segundos mientras el mapa está visible.
+
+SIGUE UN DISPOSITIVO
+Selecciona un dispositivo y el mapa lo mantiene centrado mientras se mueve. Arrastra el mapa para dejar de seguirlo; toca el dispositivo de nuevo para retomar. Los botones se ocultan a los pocos segundos para dejar el mapa limpio.
+
+UN TILE POR PERSONA O VEHÍCULO
+Añade el tile Mapa Traccar una vez por cada dispositivo que quieras vigilar, por ejemplo el coche de tu pareja. Muestra la zona a su alrededor con botones de zoom. Toca el nombre para elegir otro dispositivo, la hora para actualizar y el mapa para abrir la app centrada en él. El tile pide una actualización cada vez que aparece en pantalla.
+
+AVISOS, SOLO SI LOS QUIERES
+Desactivados por defecto. Elige "solo cuando el móvil no está cerca" o "siempre". El reloj consulta cada 15 minutos los tipos de evento que configuraste en Notificaciones en Traccar. Sin Firebase y sin nada que configurar en el servidor.
+
+ELIGE TU MAPA
+OpenStreetMap y OpenTopoMap no necesitan clave. LocationIQ, MapTiler, TomTom, HERE y Mapbox están disponibles si tienes una clave. Las claves nunca se escriben en el reloj: la app las lee de los atributos de tu Traccar, con los mismos nombres que usa la app web.
+
+PENSADA PARA ESCRIBIR EN UN RELOJ
+Nada se oculta, los valores largos se reparten en varias líneas y cada campo de texto tiene un botón Borrar. Disponible en español, inglés, francés, alemán, italiano, portugués, catalán, euskera y gallego.
+
+PRIVADA POR DISEÑO
+La app solo se comunica con el servidor Traccar que indiques y con el proveedor de mapas que elijas, para descargar las teselas del mapa. Tu contraseña se usa una vez para obtener un token y nunca se guarda en el reloj. Sin analíticas, sin anuncios, sin cuentas.
+
+PRIMEROS PASOS
+Abre la app, introduce la URL del servidor, tu correo y tu contraseña, y pulsa Iniciar sesión. Para añadir el tile, elige "Mapa Traccar" en el carrusel de tiles de tu reloj.
+
+REQUISITOS
+Wear OS 3 o superior y un servidor Traccar 6 al que puedas acceder desde el reloj. Necesitas Wi-Fi o LTE para usarla lejos del móvil. No hace falta ninguna app en el teléfono.
+
+LIBRE Y DE CÓDIGO ABIERTO
+Publicada bajo licencia GPLv3: https://github.com/Eduzyrtin/TraccarWearViewer
+
+Viewer for Traccar es un proyecto independiente y no está afiliado ni respaldado por Traccar. "Traccar" es una marca de sus respectivos propietarios.

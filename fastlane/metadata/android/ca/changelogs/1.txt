@@ -1,0 +1,1 @@
+Primera versió. Els teus dispositius Traccar en un mapa al rellotge: seguir un dispositiu, un mosaic de mapa per dispositiu, avisos opcionals i nou idiomes.

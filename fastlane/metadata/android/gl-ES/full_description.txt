@@ -1,0 +1,36 @@
+Viewer for Traccar amosa os dispositivos do teu propio servidor Traccar nun mapa, directamente no pulso. É un visor, non un xestor: fai un só traballo e faino ben nunha pantalla redonda pequena. Funciona con calquera servidor Traccar 6 sen cambiar a súa configuración.
+
+UN MAPA, COMO NA APP WEB
+• Todos os dispositivos nun só mapa, coa cor do seu estado: verde conectado, vermello desconectado, gris descoñecido.
+• Zoom coa coroa ou o bisel, cos botóns +/−, con dobre toque ou belisco. Arrastra para moverte.
+• Toca un dispositivo para ver o seu estado, a última actualización e a velocidade.
+• As posicións actualízanse cada 30 segundos mentres o mapa está visible.
+
+SEGUE UN DISPOSITIVO
+Selecciona un dispositivo e o mapa mantéño centrado mentres se move. Arrastra o mapa para deixar de seguilo; toca o dispositivo de novo para retomar. Os botóns agóchanse aos poucos segundos para deixar o mapa limpo.
+
+UN MOSAICO POR PERSOA OU VEHÍCULO
+Engade o mosaico Mapa Traccar unha vez por cada dispositivo que queiras vixiar, por exemplo o coche da túa parella. Amosa a zona ao seu redor con botóns de zoom. Toca o nome para escoller outro dispositivo, a hora para actualizar e o mapa para abrir a app centrada nel. O mosaico pide unha actualización cada vez que aparece na pantalla.
+
+AVISOS, SÓ SE OS QUERES
+Desactivados por defecto. Escolle "só cando o móbil non está preto" ou "sempre". O reloxo consulta cada 15 minutos os tipos de evento que configuraches en Notificacións en Traccar. Sen Firebase e sen nada que configurar no servidor.
+
+ESCOLLE O TEU MAPA
+OpenStreetMap e OpenTopoMap non precisan clave. LocationIQ, MapTiler, TomTom, HERE e Mapbox están dispoñibles se tes unha clave. As claves nunca se escriben no reloxo: a app leas dos atributos do teu Traccar, cos mesmos nomes que usa a app web.
+
+PENSADA PARA ESCRIBIR NUN RELOXO
+Non se agocha nada, os valores longos repártense en varias liñas e cada campo de texto ten un botón Borrar. Dispoñible en galego, inglés, castelán, francés, alemán, italiano, portugués, catalán e éuscaro.
+
+PRIVADA POR DESEÑO
+A app só se comunica co servidor Traccar que indiques e co provedor de mapas que escollas, para descargar as teselas do mapa. O teu contrasinal úsase unha vez para obter un token e nunca se garda no reloxo. Sen analíticas, sen anuncios, sen contas.
+
+PRIMEIROS PASOS
+Abre a app, introduce o URL do servidor, o teu correo e o teu contrasinal, e preme Iniciar sesión. Para engadir o mosaico, escolle "Mapa Traccar" no carrusel de mosaicos do reloxo.
+
+REQUISITOS
+Wear OS 3 ou superior e un servidor Traccar 6 ao que poidas acceder desde o reloxo. Precisas Wi-Fi ou LTE para usala lonxe do móbil. Non fai falta ningunha app no teléfono.
+
+LIBRE E DE CÓDIGO ABERTO
+Publicada baixo licenza GPLv3: https://github.com/Eduzyrtin/TraccarWearViewer
+
+Viewer for Traccar é un proxecto independente e non está afiliado nin avalado por Traccar. "Traccar" é unha marca dos seus respectivos propietarios.

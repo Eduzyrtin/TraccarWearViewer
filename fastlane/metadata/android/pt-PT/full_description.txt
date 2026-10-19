@@ -1,0 +1,36 @@
+O Viewer for Traccar mostra os dispositivos do seu próprio servidor Traccar num mapa, mesmo no seu pulso. É um visualizador, não um gestor: faz uma só tarefa, e bem, num pequeno ecrã redondo. Funciona com qualquer servidor Traccar 6 sem alterar a sua configuração.
+
+UM MAPA, COMO NA APLICAÇÃO WEB
+• Todos os dispositivos num só mapa, com a cor do respetivo estado: verde online, vermelho offline, cinzento desconhecido.
+• Zoom com a coroa ou o aro, com os botões +/−, com toque duplo ou pinça. Arraste para mover.
+• Toque num dispositivo para ver o estado, a última atualização e a velocidade.
+• As posições são atualizadas a cada 30 segundos enquanto o mapa está visível.
+
+SIGA UM DISPOSITIVO
+Selecione um dispositivo e o mapa mantém-no centrado enquanto ele se move. Arraste o mapa para deixar de seguir; toque no dispositivo outra vez para retomar. Os botões ocultam-se ao fim de alguns segundos para o mapa ficar limpo.
+
+UM MOSAICO POR PESSOA OU VEÍCULO
+Adicione o mosaico Mapa Traccar uma vez por cada dispositivo que queira acompanhar, por exemplo o carro do seu companheiro ou companheira. Mostra a zona à volta com botões de zoom. Toque no nome para escolher outro dispositivo, na hora para atualizar e no mapa para abrir a aplicação centrada nele. O mosaico pede uma atualização sempre que aparece no ecrã.
+
+ALERTAS, SÓ SE QUISER
+Desativados por predefinição. Escolha "só quando o telemóvel não está por perto" ou "sempre". O relógio verifica de 15 em 15 minutos os tipos de evento que configurou em Notificações no Traccar. Sem Firebase e sem nada para configurar no servidor.
+
+ESCOLHA O SEU MAPA
+O OpenStreetMap e o OpenTopoMap não precisam de chave. O LocationIQ, o MapTiler, o TomTom, o HERE e o Mapbox estão disponíveis se tiver uma chave. As chaves nunca se escrevem no relógio: a aplicação lê-as dos atributos do seu Traccar, com os mesmos nomes da aplicação web.
+
+PENSADA PARA ESCREVER NUM RELÓGIO
+Nada fica oculto, os valores longos passam para várias linhas e cada campo de texto tem um botão Limpar. Disponível em inglês, espanhol, francês, alemão, italiano, português, catalão, basco e galego.
+
+PRIVADA POR DESIGN
+A aplicação comunica apenas com o servidor Traccar que indicar e com o fornecedor de mapas que escolher, para descarregar os mosaicos do mapa. A sua palavra-passe é usada uma vez para obter um token e nunca é guardada no relógio. Sem análises, sem anúncios, sem contas.
+
+PRIMEIROS PASSOS
+Abra a aplicação, introduza o URL do servidor, o e-mail e a palavra-passe e toque em Iniciar sessão. Para adicionar o mosaico, escolha "Mapa Traccar" no carrossel de mosaicos do relógio.
+
+REQUISITOS
+Wear OS 3 ou superior e um servidor Traccar 6 acessível a partir do relógio. Precisa de Wi-Fi ou LTE para o usar longe do telemóvel. Não é necessária nenhuma aplicação no telemóvel.
+
+LIVRE E DE CÓDIGO ABERTO
+Publicada sob a licença GPLv3: https://github.com/Eduzyrtin/TraccarWearViewer
+
+O Viewer for Traccar é um projeto independente, sem qualquer afiliação ou aprovação por parte do Traccar. «Traccar» é uma marca dos respetivos proprietários.

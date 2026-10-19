@@ -1,0 +1,1 @@
+First release. Your Traccar devices on a map on your watch: follow a device, a map tile per device, optional alerts and nine languages.

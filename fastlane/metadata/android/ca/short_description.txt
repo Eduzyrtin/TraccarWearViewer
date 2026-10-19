@@ -1,0 +1,1 @@
+Veu els teus dispositius Traccar en un mapa, directament al rellotge Wear OS.

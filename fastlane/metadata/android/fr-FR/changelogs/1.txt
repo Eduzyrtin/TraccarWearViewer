@@ -1,0 +1,1 @@
+Première version. Vos appareils Traccar sur une carte au poignet : suivre un appareil, une tuile de carte par appareil, alertes facultatives et neuf langues.

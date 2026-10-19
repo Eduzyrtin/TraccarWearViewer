@@ -1,0 +1,36 @@
+Viewer for Traccar zeigt die Geräte deines eigenen Traccar-Servers auf einer Karte – direkt am Handgelenk. Es ist ein Viewer, kein Verwaltungswerkzeug: Es erledigt eine Aufgabe gut, auf einem kleinen runden Display. Es funktioniert mit jedem Traccar-6-Server, ohne dessen Konfiguration zu ändern.
+
+EINE KARTE WIE IN DER WEB-APP
+• Alle verfolgten Geräte auf einer Karte, nach Status eingefärbt: grün online, rot offline, grau unbekannt.
+• Zoomen mit der Krone oder Lünette, den +/−-Tasten, per Doppeltippen oder Spreizen. Zum Verschieben ziehen.
+• Tippe auf ein Gerät, um Status, letzte Aktualisierung und Geschwindigkeit zu sehen.
+• Die Positionen werden alle 30 Sekunden aktualisiert, solange die Karte sichtbar ist.
+
+EIN GERÄT VERFOLGEN
+Wähle ein Gerät aus, und die Karte hält es beim Bewegen in der Mitte. Zieh die Karte, um das Folgen zu beenden; tippe erneut auf das Gerät, um es wieder aufzunehmen. Die Tasten blenden sich nach wenigen Sekunden aus, damit die Karte übersichtlich bleibt.
+
+EINE KACHEL PRO PERSON ODER FAHRZEUG
+Füge die Kachel „Traccar-Karte“ für jedes Gerät hinzu, das du im Blick behalten möchtest, zum Beispiel das Auto deines Partners. Sie zeigt die Umgebung mit Zoom-Tasten. Tippe auf den Namen, um ein anderes Gerät zu wählen, auf die Uhrzeit zum Aktualisieren, auf die Karte, um die App zentriert darauf zu öffnen. Die Kachel fordert bei jedem Einblenden eine Aktualisierung an.
+
+HINWEISE – NUR WENN DU SIE WILLST
+Standardmäßig aus. Wähle „nur wenn das Smartphone nicht in der Nähe ist“ oder „immer“. Die Uhr prüft alle 15 Minuten die Ereignistypen, die du in Traccar unter Benachrichtigungen eingerichtet hast. Kein Firebase und nichts auf dem Server einzurichten.
+
+WÄHLE DEINE KARTE
+OpenStreetMap und OpenTopoMap brauchen keinen Schlüssel. LocationIQ, MapTiler, TomTom, HERE und Mapbox sind verfügbar, wenn du einen Schlüssel hast. Schlüssel werden nie auf der Uhr eingetippt: Die App liest sie aus den Attributen deines Traccar, mit denselben Namen wie in der Web-App.
+
+FÜR DIE EINGABE AUF DER UHR GEMACHT
+Nichts wird verdeckt, lange Werte werden auf mehrere Zeilen umbrochen und jedes Textfeld hat eine Löschen-Schaltfläche. Verfügbar auf Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Katalanisch, Baskisch und Galicisch.
+
+PRIVAT VON GRUND AUF
+Die App kommuniziert nur mit dem Traccar-Server, den du angibst, und mit dem Kartenanbieter, den du wählst, um Kartenkacheln zu laden. Dein Passwort wird einmal verwendet, um ein Token zu erhalten, und nie auf der Uhr gespeichert. Keine Analyse, keine Werbung, keine Konten.
+
+SO GEHT'S
+Öffne die App, gib Server-URL, E-Mail und Passwort ein und tippe auf Anmelden. Um die Kachel hinzuzufügen, wähle „Traccar-Karte“ im Kachel-Karussell deiner Uhr.
+
+VORAUSSETZUNGEN
+Wear OS 3 oder neuer und ein Traccar-6-Server, den die Uhr erreichen kann. Für die Nutzung ohne Smartphone brauchst du WLAN oder LTE. Auf dem Smartphone ist keine App nötig.
+
+FREI UND OPEN SOURCE
+Veröffentlicht unter der GPLv3: https://github.com/Eduzyrtin/TraccarWearViewer
+
+Viewer for Traccar ist ein unabhängiges Projekt und steht in keiner Verbindung zu Traccar und wird von Traccar nicht unterstützt. „Traccar“ ist eine Marke der jeweiligen Inhaber.

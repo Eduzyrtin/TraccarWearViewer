@@ -1,0 +1,1 @@
+Primera versión. Tus dispositivos Traccar en un mapa en el reloj: seguir un dispositivo, un tile de mapa por dispositivo, avisos opcionales y nueve idiomas.

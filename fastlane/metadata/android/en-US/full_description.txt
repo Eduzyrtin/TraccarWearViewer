@@ -1,0 +1,36 @@
+Viewer for Traccar shows the devices of your own Traccar server on a map, right on your wrist. It is a viewer, not a manager: it does one job well on a small round screen. It works with any Traccar 6 server without changing its configuration.
+
+A MAP, LIKE THE WEB APP
+• Every tracked device on one map, colored by status: green online, red offline, grey unknown.
+• Zoom with the crown or bezel, the +/− buttons, double tap or pinch. Drag to move.
+• Tap a device to see its status, last update and speed.
+• Positions refresh every 30 seconds while the map is visible.
+
+FOLLOW A DEVICE
+Select a device and the map keeps it centered as it moves. Drag the map to stop following; tap the device again to resume. The buttons hide after a few seconds so the map stays clean.
+
+A TILE PER PERSON OR VEHICLE
+Add the Traccar map tile once for each device you want to keep an eye on, for example your partner's car. It shows the area around it with zoom buttons. Tap the name to pick another device, tap the time to refresh, tap the map to open the app centered on it. The tile asks for an update every time it comes into view.
+
+ALERTS, ONLY IF YOU WANT THEM
+Off by default. Choose "only when the phone is not nearby" or "always". The watch checks the event types you configured under Notifications in Traccar every 15 minutes. No Firebase and nothing to set up on the server.
+
+CHOOSE YOUR MAP
+OpenStreetMap and OpenTopoMap need no key. LocationIQ, MapTiler, TomTom, HERE and Mapbox are available if you have a key. Keys are never typed on the watch: the app reads them from your Traccar attributes, using the same names as the web app.
+
+MADE FOR TYPING ON A WATCH
+Nothing is masked, long values wrap onto several lines and every text field has a Clear button. Available in English, Spanish, French, German, Italian, Portuguese, Catalan, Basque and Galician.
+
+PRIVATE BY DESIGN
+The app talks only to the Traccar server you enter and to the map provider you choose, to download map tiles. Your password is used once to get a token and is never stored on the watch. No analytics, no ads, no accounts.
+
+GETTING STARTED
+Open the app, enter your server URL, email and password, and tap Sign in. To add the tile, choose "Traccar map" from your watch's tile carousel.
+
+REQUIREMENTS
+Wear OS 3 or newer and a Traccar 6 server you can reach from the watch. You need Wi-Fi or LTE to use it away from your phone. No app is needed on the phone.
+
+FREE AND OPEN SOURCE
+Released under the GPLv3: https://github.com/Eduzyrtin/TraccarWearViewer
+
+Viewer for Traccar is an independent project and is not affiliated with or endorsed by Traccar. "Traccar" is a trademark of its respective owners.

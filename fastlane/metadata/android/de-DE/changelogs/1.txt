@@ -1,0 +1,1 @@
+Erste Version. Deine Traccar-Geräte auf einer Karte an der Uhr: einem Gerät folgen, eine Karten-Kachel pro Gerät, optionale Hinweise und neun Sprachen.

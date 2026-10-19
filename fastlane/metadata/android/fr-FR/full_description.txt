@@ -1,0 +1,36 @@
+Viewer for Traccar affiche les appareils de votre propre serveur Traccar sur une carte, directement à votre poignet. C'est un visualiseur, pas un outil d'administration : il fait une seule chose, et la fait bien, sur un petit écran rond. Il fonctionne avec tout serveur Traccar 6 sans modifier sa configuration.
+
+UNE CARTE, COMME DANS L'APPLICATION WEB
+• Tous les appareils suivis sur une seule carte, colorés selon leur état : vert en ligne, rouge hors ligne, gris inconnu.
+• Zoom avec la couronne ou la lunette, avec les boutons +/−, par double appui ou pincement. Faites glisser pour vous déplacer.
+• Touchez un appareil pour voir son état, sa dernière mise à jour et sa vitesse.
+• Les positions sont actualisées toutes les 30 secondes tant que la carte est visible.
+
+SUIVRE UN APPAREIL
+Sélectionnez un appareil et la carte le garde centré pendant qu'il se déplace. Faites glisser la carte pour arrêter le suivi ; touchez de nouveau l'appareil pour le reprendre. Les boutons se masquent au bout de quelques secondes pour garder une carte dégagée.
+
+UNE TUILE PAR PERSONNE OU PAR VÉHICULE
+Ajoutez la tuile Carte Traccar une fois pour chaque appareil que vous voulez garder à l'œil, par exemple la voiture de votre conjoint. Elle montre les environs avec des boutons de zoom. Touchez le nom pour choisir un autre appareil, l'heure pour actualiser, la carte pour ouvrir l'application centrée dessus. La tuile demande une mise à jour chaque fois qu'elle apparaît à l'écran.
+
+ALERTES, UNIQUEMENT SI VOUS LE SOUHAITEZ
+Désactivées par défaut. Choisissez « seulement quand le téléphone n'est pas à proximité » ou « toujours ». La montre vérifie toutes les 15 minutes les types d'événements que vous avez configurés dans Notifications sur Traccar. Pas de Firebase et rien à configurer sur le serveur.
+
+CHOISISSEZ VOTRE CARTE
+OpenStreetMap et OpenTopoMap n'ont pas besoin de clé. LocationIQ, MapTiler, TomTom, HERE et Mapbox sont disponibles si vous avez une clé. Les clés ne se saisissent jamais sur la montre : l'application les lit dans les attributs de votre Traccar, avec les mêmes noms que l'application web.
+
+CONÇUE POUR SAISIR DU TEXTE SUR UNE MONTRE
+Rien n'est masqué, les valeurs longues passent à la ligne et chaque champ de texte a un bouton Effacer. Disponible en anglais, espagnol, français, allemand, italien, portugais, catalan, basque et galicien.
+
+RESPECTUEUSE DE VOTRE VIE PRIVÉE
+L'application ne communique qu'avec le serveur Traccar que vous indiquez et avec le fournisseur de cartes que vous choisissez, pour télécharger les tuiles de la carte. Votre mot de passe sert une seule fois à obtenir un jeton et n'est jamais conservé sur la montre. Pas d'analyse, pas de publicité, pas de compte.
+
+POUR COMMENCER
+Ouvrez l'application, saisissez l'URL du serveur, votre e-mail et votre mot de passe, puis touchez Se connecter. Pour ajouter la tuile, choisissez « Carte Traccar » dans le carrousel de tuiles de votre montre.
+
+CONFIGURATION REQUISE
+Wear OS 3 ou plus récent et un serveur Traccar 6 accessible depuis la montre. Il faut du Wi-Fi ou de la LTE pour l'utiliser loin du téléphone. Aucune application n'est nécessaire sur le téléphone.
+
+LIBRE ET OPEN SOURCE
+Publiée sous licence GPLv3 : https://github.com/Eduzyrtin/TraccarWearViewer
+
+Viewer for Traccar est un projet indépendant, non affilié à Traccar et non approuvé par Traccar. « Traccar » est une marque de ses propriétaires respectifs.

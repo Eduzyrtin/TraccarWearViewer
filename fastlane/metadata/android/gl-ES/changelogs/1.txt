@@ -1,0 +1,1 @@
+Primeira versión. Os teus dispositivos Traccar nun mapa no reloxo: seguir un dispositivo, un mosaico de mapa por dispositivo, avisos opcionais e nove idiomas.

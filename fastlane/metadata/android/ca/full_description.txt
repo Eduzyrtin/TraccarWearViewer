@@ -1,0 +1,36 @@
+Viewer for Traccar mostra els dispositius del teu propi servidor Traccar en un mapa, directament al canell. És un visor, no un gestor: fa una sola feina i la fa bé en una pantalla rodona petita. Funciona amb qualsevol servidor Traccar 6 sense canviar-ne la configuració.
+
+UN MAPA, COM A L'APP WEB
+• Tots els dispositius en un sol mapa, amb el color del seu estat: verd connectat, vermell desconnectat, gris desconegut.
+• Zoom amb la corona o el bisell, amb els botons +/−, amb doble toc o pessic. Arrossega per moure't.
+• Toca un dispositiu per veure'n l'estat, l'última actualització i la velocitat.
+• Les posicions s'actualitzen cada 30 segons mentre el mapa és visible.
+
+SEGUEIX UN DISPOSITIU
+Selecciona un dispositiu i el mapa el manté centrat mentre es mou. Arrossega el mapa per deixar de seguir-lo; toca el dispositiu de nou per reprendre. Els botons s'amaguen al cap de pocs segons per deixar el mapa net.
+
+UN MOSAIC PER PERSONA O VEHICLE
+Afegeix el mosaic Mapa Traccar una vegada per cada dispositiu que vulguis vigilar, per exemple el cotxe de la teva parella. Mostra la zona del voltant amb botons de zoom. Toca el nom per triar un altre dispositiu, l'hora per actualitzar i el mapa per obrir l'app centrada en ell. El mosaic demana una actualització cada vegada que apareix a la pantalla.
+
+AVISOS, NOMÉS SI ELS VOLS
+Desactivats per defecte. Tria "només quan el mòbil no és a prop" o "sempre". El rellotge consulta cada 15 minuts els tipus d'esdeveniment que vas configurar a Notificacions a Traccar. Sense Firebase i sense res a configurar al servidor.
+
+TRIA EL TEU MAPA
+OpenStreetMap i OpenTopoMap no necessiten clau. LocationIQ, MapTiler, TomTom, HERE i Mapbox estan disponibles si tens una clau. Les claus no s'escriuen mai al rellotge: l'app les llegeix dels atributs del teu Traccar, amb els mateixos noms que fa servir l'app web.
+
+PENSADA PER ESCRIURE EN UN RELLOTGE
+No s'amaga res, els valors llargs es reparteixen en diverses línies i cada camp de text té un botó Esborra. Disponible en català, anglès, castellà, francès, alemany, italià, portuguès, basc i gallec.
+
+PRIVADA PER DISSENY
+L'app només es comunica amb el servidor Traccar que indiquis i amb el proveïdor de mapes que triïs, per baixar les tessel·les del mapa. La contrasenya es fa servir una vegada per obtenir un testimoni i mai no es desa al rellotge. Sense analítiques, sense anuncis, sense comptes.
+
+PRIMERS PASSOS
+Obre l'app, introdueix l'URL del servidor, el teu correu i la contrasenya, i toca Inicia la sessió. Per afegir el mosaic, tria "Mapa Traccar" al carrusel de mosaics del rellotge.
+
+REQUISITS
+Wear OS 3 o posterior i un servidor Traccar 6 al qual puguis accedir des del rellotge. Necessites Wi-Fi o LTE per fer-la servir lluny del mòbil. No cal cap app al telèfon.
+
+LLIURE I DE CODI OBERT
+Publicada amb llicència GPLv3: https://github.com/Eduzyrtin/TraccarWearViewer
+
+Viewer for Traccar és un projecte independent i no està afiliat ni avalat per Traccar. "Traccar" és una marca dels seus respectius propietaris.
