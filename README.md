@@ -1,8 +1,6 @@
 <!--
   TODO before going public:
-  - Check the repository name in the badges and links (Eduzyrtin/TraccarWearViewer).
-  - Publish a first release so the "download" badge and the APK link work.
-  - Check the Play Store link (the application id is com.sanabria.traccarwearosviewer) once the app is published.
+  - Make the repository public: the "download" badge (shields.io) can only read public repositories.
 -->
 
 <div align="center">
