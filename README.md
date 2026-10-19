@@ -1,8 +1,3 @@
-<!--
-  TODO before going public:
-  - Make the repository public: the "download" badge (shields.io) can only read public repositories.
--->
-
 <div align="center">
 
 # Wear OS Viewer for Traccar
