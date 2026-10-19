@@ -1,7 +1,6 @@
 <!--
   TODO before going public:
   - Check the repository name in the badges and links (Eduzyrtin/TraccarWearViewer).
-  - Publish a first release so the "download" badge and the APK link work.
   - Check the Play Store link (the application id is com.sanabria.traccarwearosviewer) once the app is published.
 -->
 
@@ -31,9 +30,9 @@ No Firebase and nothing to configure on the server.
   </tr>
 </table>
 
-**[Download the APK](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)** · [Getting started](#getting-started) · [Map types and API keys](#map-types-and-api-keys) · [FAQ](#faq)
+**[Get it on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** · [Getting started](#getting-started) · [Map types and API keys](#map-types-and-api-keys) · [FAQ](#faq)
 
-> **Free here, paid on Google Play.** The APK on GitHub is completely free. If you would rather install it from the Play Store, that edition is the **paid version, as a way of donating** to the project: **[Viewer for Traccar on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)**. Same app either way.
+> **Free, only on Google Play.** It is not distributed through GitHub. **[Get Viewer for Traccar on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)**.
 
 </div>
 
@@ -82,8 +81,8 @@ This is an independent project and is not affiliated with or endorsed by Traccar
 - A watch with **Wear OS 3 or newer** (API 30+), with Wi-Fi or LTE if you want it away from the phone.
 - A **Traccar 6** server you can reach from the watch.
 
-### 1 · Install the APK
-Download the latest `.apk` from **[Releases](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)** and install it on the watch, for example with `adb install` over Wi-Fi debugging. Only install it from this repository's Releases page.
+### 1 · Install from Google Play
+Install **[Viewer for Traccar](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** on the watch from the Play Store.
 
 ### 2 · Sign in
 Open the app, enter your **server URL**, **email** and **password**, and tap *Sign in*. You get a token valid for a year; the password is not kept.
@@ -193,22 +192,16 @@ Yes, plain HTTP is allowed because many self-hosted servers use it. Use HTTPS wh
 It is the map data attribution, required by the licenses. See [Map attribution](#map-attribution).
 </details>
 
-<details>
-<summary><b>Can I switch between the GitHub APK and the Play Store version?</b></summary>
-
-They are signed with different keys, so one cannot update the other. Uninstall first; you will have to sign in again.
-</details>
-
 ## Found a bug? Have an idea?
 
 Please open an **[issue](https://github.com/Eduzyrtin/TraccarWearViewer/issues)** with your watch model, Wear OS version and what you were doing.
 
 ## Support the project
 
-Viewer for Traccar is a passion project and the APK here is **free**. If it is useful to you:
+Viewer for Traccar is a passion project and it is **free** on Google Play. If it is useful to you:
 
 - ☕ **[Buy me a coffee on Ko-fi](https://ko-fi.com/Eduzyrtin)**
-- ▶️ Get the **[Play Store edition](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)**: the same app, offered there as a **paid version in donation format**, with automatic updates.
+- ▶️ **[Get it on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)**: automatic updates included.
 - ⭐ Star the repo and tell someone who tracks their cars or bikes with Traccar.
 
 Looking for the other half? **[Tracker for Traccar](https://github.com/Eduzyrtin/TraccarWearClient)** sends your watch's own location to your server.
