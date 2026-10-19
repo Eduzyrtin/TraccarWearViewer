@@ -25,9 +25,9 @@ No Firebase and nothing to configure on the server.
 
 <table>
   <tr>
-    <td align="center"><img src="docs/media/viewer-map.png" width="200"><br><sub>Every device on one map</sub></td>
-    <td align="center"><img src="docs/media/viewer-follow.png" width="200"><br><sub>Select one and the map follows it</sub></td>
-    <td align="center"><img src="docs/media/viewer-tile.png" width="200"><br><sub>A tile per person or vehicle</sub></td>
+    <td align="center"><img src="docs/media/shot-map.png" width="200"><br><sub>Every device on one map</sub></td>
+    <td align="center"><img src="docs/media/shot-follow.png" width="200"><br><sub>Select one and the map follows it</sub></td>
+    <td align="center"><img src="docs/media/shot-tile.png" width="200"><br><sub>A tile per person or vehicle</sub></td>
   </tr>
 </table>
 
@@ -131,9 +131,9 @@ Example: for LocationIQ, add an attribute named `locationIqKey` with your `pk...
 
 <table>
   <tr>
-    <td align="center"><img src="docs/media/viewer-settings.png" width="200"><br><sub>Settings</sub></td>
-    <td align="center"><img src="docs/media/viewer-map-types.png" width="200"><br><sub>Maps that need a key show which one</sub></td>
-    <td align="center"><img src="docs/media/viewer-list.png" width="200"><br><sub>The device list</sub></td>
+    <td align="center"><img src="docs/media/shot-settings.png" width="200"><br><sub>Settings</sub></td>
+    <td align="center"><img src="docs/media/shot-map-types.png" width="200"><br><sub>Maps that need a key show which one</sub></td>
+    <td align="center"><img src="docs/media/shot-list.png" width="200"><br><sub>The device list</sub></td>
   </tr>
 </table>
 
