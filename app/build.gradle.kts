@@ -18,7 +18,7 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.sanabria.traccarwearostracker"
+        applicationId = "com.sanabria.traccarwearosviewer"
         // Wear OS 3 o superior
         minSdk = 30
         targetSdk = 36
