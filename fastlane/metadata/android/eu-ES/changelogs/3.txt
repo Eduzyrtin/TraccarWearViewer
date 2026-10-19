@@ -1,0 +1,1 @@
+0.1.0 bertsioaren funtzio berberak, berriro argitaratua, aplikazioa Google Play-n eskuragarri egon dadin: gailu bati jarraitu, mapa-lauza bat gailu bakoitzeko, aukerako abisuak eta bederatzi hizkuntza.

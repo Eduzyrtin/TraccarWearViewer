@@ -25,8 +25,11 @@ Paquete `com.sanabria.traccarwearosviewer` · solo Wear OS · ficha en [`fastlan
 - **Enlace al repositorio**: la descripción apunta a `github.com/Eduzyrtin/TraccarWearViewer`. Si el repo sigue privado, quita
   la sección «FREE AND OPEN SOURCE» (y su traducción) de los 9 idiomas, o haz el repo público antes de publicar.
 
-## Versión 2 (0.1.1)
+## Versiones 2 (0.1.1) y 3 (0.1.2)
 
 La versión 1 (0.1.0) quedó como «sustituida por otra versión · sin publicar» tras el rechazo automático del primer envío y la
 producción de Wear OS seguía «inactiva». La 0.1.1 es la misma app con `versionCode` 2: súbela en *Producción (Wear OS) › Crear
 nueva versión* y envíala a revisión. Sus novedades están en `changelogs/2.txt` (9 idiomas).
+
+Play no deja reutilizar el bundle 2 (ya está ligado a la versión 2, «sustituida · sin publicar») ni el 1 (más antiguo que el 2), así
+que se generó la 3 (0.1.2), idéntica, con `versionCode` 3. Sube **ese** AAB en *Crear nueva versión* y envíala a revisión.

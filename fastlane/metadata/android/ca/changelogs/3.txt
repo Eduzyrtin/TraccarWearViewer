@@ -1,0 +1,1 @@
+Mateixes funcions que la 0.1.0, republicada perquè l'app estigui disponible a Google Play: seguir un dispositiu, un mosaic de mapa per dispositiu, avisos opcionals i nou idiomes.
