@@ -1,4 +1,4 @@
-Viewer for Traccar mostra i dispositivi del tuo server Traccar su una mappa, direttamente al polso. È un visualizzatore, non un gestionale: fa una sola cosa e la fa bene su un piccolo schermo rotondo. Funziona con qualsiasi server Traccar 6 senza modificarne la configurazione.
+Wear OS Viewer for Traccar mostra i dispositivi del tuo server Traccar su una mappa, direttamente al polso. È un visualizzatore, non un gestionale: fa una sola cosa e la fa bene su un piccolo schermo rotondo. Funziona con qualsiasi server Traccar 6 senza modificarne la configurazione.
 
 UNA MAPPA, COME NELL'APP WEB
 • Tutti i dispositivi su un'unica mappa, con il colore del loro stato: verde online, rosso offline, grigio sconosciuto.
@@ -33,4 +33,4 @@ Wear OS 3 o successivo e un server Traccar 6 raggiungibile dall'orologio. Serve 
 LIBERA E OPEN SOURCE
 Pubblicata con licenza GPLv3: https://github.com/Eduzyrtin/TraccarWearViewer
 
-Viewer for Traccar è un progetto indipendente e non è affiliato né approvato da Traccar. "Traccar" è un marchio dei rispettivi proprietari.
+Wear OS Viewer for Traccar è un progetto indipendente e non è affiliato né approvato da Traccar. "Traccar" è un marchio dei rispettivi proprietari.

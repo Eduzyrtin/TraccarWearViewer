@@ -1,4 +1,4 @@
-Viewer for Traccar affiche les appareils de votre propre serveur Traccar sur une carte, directement à votre poignet. C'est un visualiseur, pas un outil d'administration : il fait une seule chose, et la fait bien, sur un petit écran rond. Il fonctionne avec tout serveur Traccar 6 sans modifier sa configuration.
+Wear OS Viewer for Traccar affiche les appareils de votre propre serveur Traccar sur une carte, directement à votre poignet. C'est un visualiseur, pas un outil d'administration : il fait une seule chose, et la fait bien, sur un petit écran rond. Il fonctionne avec tout serveur Traccar 6 sans modifier sa configuration.
 
 UNE CARTE, COMME DANS L'APPLICATION WEB
 • Tous les appareils suivis sur une seule carte, colorés selon leur état : vert en ligne, rouge hors ligne, gris inconnu.
@@ -33,4 +33,4 @@ Wear OS 3 ou plus récent et un serveur Traccar 6 accessible depuis la montre. I
 LIBRE ET OPEN SOURCE
 Publiée sous licence GPLv3 : https://github.com/Eduzyrtin/TraccarWearViewer
 
-Viewer for Traccar est un projet indépendant, non affilié à Traccar et non approuvé par Traccar. « Traccar » est une marque de ses propriétaires respectifs.
+Wear OS Viewer for Traccar est un projet indépendant, non affilié à Traccar et non approuvé par Traccar. « Traccar » est une marque de ses propriétaires respectifs.

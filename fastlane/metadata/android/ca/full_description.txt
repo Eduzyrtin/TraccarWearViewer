@@ -1,4 +1,4 @@
-Viewer for Traccar mostra els dispositius del teu propi servidor Traccar en un mapa, directament al canell. És un visor, no un gestor: fa una sola feina i la fa bé en una pantalla rodona petita. Funciona amb qualsevol servidor Traccar 6 sense canviar-ne la configuració.
+Wear OS Viewer for Traccar mostra els dispositius del teu propi servidor Traccar en un mapa, directament al canell. És un visor, no un gestor: fa una sola feina i la fa bé en una pantalla rodona petita. Funciona amb qualsevol servidor Traccar 6 sense canviar-ne la configuració.
 
 UN MAPA, COM A L'APP WEB
 • Tots els dispositius en un sol mapa, amb el color del seu estat: verd connectat, vermell desconnectat, gris desconegut.
@@ -33,4 +33,4 @@ Wear OS 3 o posterior i un servidor Traccar 6 al qual puguis accedir des del rel
 LLIURE I DE CODI OBERT
 Publicada amb llicència GPLv3: https://github.com/Eduzyrtin/TraccarWearViewer
 
-Viewer for Traccar és un projecte independent i no està afiliat ni avalat per Traccar. "Traccar" és una marca dels seus respectius propietaris.
+Wear OS Viewer for Traccar és un projecte independent i no està afiliat ni avalat per Traccar. "Traccar" és una marca dels seus respectius propietaris.

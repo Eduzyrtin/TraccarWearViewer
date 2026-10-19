@@ -1,1 +1,1 @@
-Viewer for Traccar
+Wear OS Viewer for Traccar

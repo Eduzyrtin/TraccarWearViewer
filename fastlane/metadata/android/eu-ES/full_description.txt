@@ -1,4 +1,4 @@
-Viewer for Traccar-ek zure Traccar zerbitzariko gailuak mapa batean erakusten ditu, zuzenean eskumuturrean. Ikustailea da, ez kudeatzailea: lan bakarra egiten du eta ondo egiten du pantaila biribil txiki batean. Edozein Traccar 6 zerbitzarirekin dabil, haren konfigurazioa aldatu gabe.
+Wear OS Viewer for Traccar-ek zure Traccar zerbitzariko gailuak mapa batean erakusten ditu, zuzenean eskumuturrean. Ikustailea da, ez kudeatzailea: lan bakarra egiten du eta ondo egiten du pantaila biribil txiki batean. Edozein Traccar 6 zerbitzarirekin dabil, haren konfigurazioa aldatu gabe.
 
 MAPA BAT, WEB APLIKAZIOAN BEZALA
 • Gailu guztiak mapa bakarrean, beren egoeraren kolorearekin: berdea konektatuta, gorria deskonektatuta, grisa ezezaguna.
@@ -33,4 +33,4 @@ Wear OS 3 edo berriagoa eta erlojutik atzi dezakezun Traccar 6 zerbitzari bat. W
 LIBREA ETA KODE IREKIKOA
 GPLv3 lizentziapean argitaratua: https://github.com/Eduzyrtin/TraccarWearViewer
 
-Viewer for Traccar proiektu independentea da eta ez dago Traccar-ekin lotuta, ezta haren babesa ere. "Traccar" bere jabeen marka da.
+Wear OS Viewer for Traccar proiektu independentea da eta ez dago Traccar-ekin lotuta, ezta haren babesa ere. "Traccar" bere jabeen marka da.

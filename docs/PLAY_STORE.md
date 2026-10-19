@@ -1,4 +1,4 @@
-# Google Play: Viewer for Traccar
+# Google Play: Wear OS Viewer for Traccar
 
 Paquete `com.sanabria.traccarwearosviewer` · solo Wear OS · ficha en [`fastlane/metadata/android/`](../fastlane/metadata/android)
 (formato estándar, ver §8 de `HERRAMIENTAS/GUIA_PROYECTOS.md`). Idiomas: los 9 de la app; `en-US` es el predeterminado.

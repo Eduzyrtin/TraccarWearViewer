@@ -21,7 +21,7 @@ No Firebase and nothing to configure on the server.
 [![9 languages](https://img.shields.io/badge/languages-9-8E6FD8)](#features)
 [![Latest release](https://img.shields.io/github/v/release/Eduzyrtin/TraccarWearViewer?color=C6F28E&label=download)](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)
 
-<img src="docs/media/hero.gif" alt="Viewer for Traccar on a Wear OS watch" width="300">
+<img src="docs/media/hero.gif" alt="Wear OS Viewer for Traccar on a Wear OS watch" width="300">
 
 <table>
   <tr>
@@ -33,7 +33,7 @@ No Firebase and nothing to configure on the server.
 
 **[Get it on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** · **[Download the APK](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)** · [Getting started](#getting-started) · [Map types and API keys](#map-types-and-api-keys) · [FAQ](#faq)
 
-> **Free, on Google Play and GitHub.** Viewer for Traccar is completely free. Install it from **[Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** for automatic updates, or download the APK from **[GitHub Releases](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)**. Same app either way.
+> **Free, on Google Play and GitHub.** Wear OS Viewer for Traccar is completely free. Install it from **[Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)** for automatic updates, or download the APK from **[GitHub Releases](https://github.com/Eduzyrtin/TraccarWearViewer/releases/latest)**. Same app either way.
 
 </div>
 
@@ -199,13 +199,13 @@ Please open an **[issue](https://github.com/Eduzyrtin/TraccarWearViewer/issues)*
 
 ## Support the project
 
-Viewer for Traccar is a passion project and it is **free**, on Google Play and on GitHub. If it is useful to you:
+Wear OS Viewer for Traccar is a passion project and it is **free**, on Google Play and on GitHub. If it is useful to you:
 
 - ☕ **[Buy me a coffee on Ko-fi](https://ko-fi.com/Eduzyrtin)**
 - ▶️ **[Get it on Google Play](https://play.google.com/store/apps/details?id=com.sanabria.traccarwearosviewer)**: automatic updates included.
 - ⭐ Star the repo and tell someone who tracks their cars or bikes with Traccar.
 
-Looking for the other half? **[Tracker for Traccar](https://github.com/Eduzyrtin/TraccarWearClient)** sends your watch's own location to your server.
+Looking for the other half? **[Wear OS Client for Traccar](https://github.com/Eduzyrtin/TraccarWearClient)** sends your watch's own location to your server.
 
 ## Building from source
 
@@ -260,7 +260,7 @@ Tested on the Wear OS API 34 emulator against a local mock server (sign-in, map,
 
 Copyright (C) 2026 Eduardo Sanabria.
 
-Viewer for Traccar is free software released under the **[GNU General Public License v3.0](LICENSE)**. You can use, study, share and modify it, and any modified version you distribute has to stay under the same license.
+Wear OS Viewer for Traccar is free software released under the **[GNU General Public License v3.0](LICENSE)**. You can use, study, share and modify it, and any modified version you distribute has to stay under the same license.
 
 <div align="center">
 <sub>"Traccar" is a trademark of its respective owners. This app is not affiliated with them.</sub>
