@@ -71,6 +71,13 @@ This is an independent project and is not affiliated with or endorsed by Traccar
 - *Settings › Refresh interval*: type any number and choose **minutes, hours or days**. It sets how often the tile refreshes on its own and how often the watch looks for new alerts.
 - Android never runs background checks more often than every 15 minutes, so alerts use whichever is larger: your interval or 15 minutes. The tile follows your interval exactly, and it also refreshes every time it comes into view.
 
+<table>
+  <tr>
+    <td align="center"><img src="docs/media/shot-alerts.png" width="200"><br><sub>Alerts per device and event type</sub></td>
+    <td align="center"><img src="docs/media/shot-refresh.png" width="200"><br><sub>Your own refresh interval</sub></td>
+  </tr>
+</table>
+
 ### ⌨️ Made for typing on a watch
 - Nothing is masked, long values wrap onto several lines and every text field has a **Clear** button.
 - Available in **English, Spanish, French, German, Italian, Portuguese, Catalan, Basque and Galician**.
