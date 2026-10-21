@@ -13,7 +13,7 @@ UN RIQUADRO PER PERSONA O VEICOLO
 Aggiungi il riquadro Mappa Traccar una volta per ogni dispositivo che vuoi tenere d'occhio, per esempio l'auto del tuo partner. Mostra la zona intorno con i pulsanti di zoom. Tocca il nome per scegliere un altro dispositivo, l'ora per aggiornare e la mappa per aprire l'app centrata su di lui. Il riquadro chiede un aggiornamento ogni volta che compare sullo schermo.
 
 AVVISI, SOLO SE LI VUOI
-Disattivati per impostazione predefinita. Scegli "solo quando il telefono non è vicino" o "sempre". L'orologio controlla ogni 15 minuti i tipi di evento che hai impostato nelle Notifiche di Traccar. Niente Firebase e nulla da configurare sul server.
+Disattivati per impostazione predefinita. Scegli "solo quando il telefono non è vicino" o "sempre" e poi, dispositivo per dispositivo, di quali tipi di evento vuoi essere avvisato (geofence, movimento, accensione…). L'orologio controlla i tipi di evento che hai impostato nelle Notifiche di Traccar con la frequenza che scegli (almeno ogni 15 minuti). Niente Firebase e nulla da configurare sul server.
 
 SCEGLI LA TUA MAPPA
 OpenStreetMap e OpenTopoMap non richiedono chiavi. LocationIQ, MapTiler, TomTom, HERE e Mapbox sono disponibili se hai una chiave. Le chiavi non si digitano mai sull'orologio: l'app le legge dagli attributi del tuo Traccar, con gli stessi nomi usati dall'app web.

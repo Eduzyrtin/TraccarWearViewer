@@ -13,7 +13,7 @@ UN MOSAIC PER PERSONA O VEHICLE
 Afegeix el mosaic Mapa Traccar una vegada per cada dispositiu que vulguis vigilar, per exemple el cotxe de la teva parella. Mostra la zona del voltant amb botons de zoom. Toca el nom per triar un altre dispositiu, l'hora per actualitzar i el mapa per obrir l'app centrada en ell. El mosaic demana una actualització cada vegada que apareix a la pantalla.
 
 AVISOS, NOMÉS SI ELS VOLS
-Desactivats per defecte. Tria "només quan el mòbil no és a prop" o "sempre". El rellotge consulta cada 15 minuts els tipus d'esdeveniment que vas configurar a Notificacions a Traccar. Sense Firebase i sense res a configurar al servidor.
+Desactivats per defecte. Tria "només quan el mòbil no és a prop" o "sempre" i, després, tria per dispositiu de quins tipus d'esdeveniment vols que t'avisi (geobarrera, moviment, contacte…). El rellotge consulta els tipus d'esdeveniment que vas configurar a Notificacions a Traccar amb la freqüència que triïs (com a mínim cada 15 minuts). Sense Firebase i sense res a configurar al servidor.
 
 TRIA EL TEU MAPA
 OpenStreetMap i OpenTopoMap no necessiten clau. LocationIQ, MapTiler, TomTom, HERE i Mapbox estan disponibles si tens una clau. Les claus no s'escriuen mai al rellotge: l'app les llegeix dels atributs del teu Traccar, amb els mateixos noms que fa servir l'app web.

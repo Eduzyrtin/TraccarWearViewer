@@ -1,0 +1,1 @@
+Elige el intervalo de refresco que quieras: minutos, horas o días. Los avisos ahora se eligen por dispositivo y por tipo de evento (geocerca, movimiento, contacto, alarmas…), como en Traccar. El tile del mapa también carga con más fiabilidad.

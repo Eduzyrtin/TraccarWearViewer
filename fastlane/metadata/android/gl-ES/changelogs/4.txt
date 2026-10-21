@@ -1,0 +1,1 @@
+Escolle o intervalo de actualización que queiras: minutos, horas ou días. Os avisos agora escóllense por dispositivo e por tipo de evento (xeocerca, movemento, contacto, alarmas…), como en Traccar. O mosaico do mapa tamén carga con máis fiabilidade.

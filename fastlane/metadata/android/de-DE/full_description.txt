@@ -13,7 +13,7 @@ EINE KACHEL PRO PERSON ODER FAHRZEUG
 Füge die Kachel „Traccar-Karte“ für jedes Gerät hinzu, das du im Blick behalten möchtest, zum Beispiel das Auto deines Partners. Sie zeigt die Umgebung mit Zoom-Tasten. Tippe auf den Namen, um ein anderes Gerät zu wählen, auf die Uhrzeit zum Aktualisieren, auf die Karte, um die App zentriert darauf zu öffnen. Die Kachel fordert bei jedem Einblenden eine Aktualisierung an.
 
 HINWEISE – NUR WENN DU SIE WILLST
-Standardmäßig aus. Wähle „nur wenn das Smartphone nicht in der Nähe ist“ oder „immer“. Die Uhr prüft alle 15 Minuten die Ereignistypen, die du in Traccar unter Benachrichtigungen eingerichtet hast. Kein Firebase und nichts auf dem Server einzurichten.
+Standardmäßig aus. Wähle „nur wenn das Smartphone nicht in der Nähe ist“ oder „immer“ und lege dann pro Gerät fest, bei welchen Ereignistypen die Uhr dich benachrichtigt (Geofence, Bewegung, Zündung …). Die Uhr prüft die Ereignistypen, die du in Traccar unter Benachrichtigungen eingerichtet hast, so oft du möchtest (mindestens alle 15 Minuten). Kein Firebase und nichts auf dem Server einzurichten.
 
 WÄHLE DEINE KARTE
 OpenStreetMap und OpenTopoMap brauchen keinen Schlüssel. LocationIQ, MapTiler, TomTom, HERE und Mapbox sind verfügbar, wenn du einen Schlüssel hast. Schlüssel werden nie auf der Uhr eingetippt: Die App liest sie aus den Attributen deines Traccar, mit denselben Namen wie in der Web-App.

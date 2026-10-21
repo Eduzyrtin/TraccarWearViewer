@@ -1,0 +1,1 @@
+Tria l'interval d'actualització que vulguis: minuts, hores o dies. Els avisos ara es trien per dispositiu i per tipus d'esdeveniment (geobarrera, moviment, contacte, alarmes…), com a Traccar. El mosaic del mapa també carrega amb més fiabilitat.

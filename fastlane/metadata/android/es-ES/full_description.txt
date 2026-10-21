@@ -13,7 +13,7 @@ UN TILE POR PERSONA O VEHÍCULO
 Añade el tile Mapa Traccar una vez por cada dispositivo que quieras vigilar, por ejemplo el coche de tu pareja. Muestra la zona a su alrededor con botones de zoom. Toca el nombre para elegir otro dispositivo, la hora para actualizar y el mapa para abrir la app centrada en él. El tile pide una actualización cada vez que aparece en pantalla.
 
 AVISOS, SOLO SI LOS QUIERES
-Desactivados por defecto. Elige "solo cuando el móvil no está cerca" o "siempre". El reloj consulta cada 15 minutos los tipos de evento que configuraste en Notificaciones en Traccar. Sin Firebase y sin nada que configurar en el servidor.
+Desactivados por defecto. Elige "solo cuando el móvil no está cerca" o "siempre" y, después, elige por dispositivo de qué tipos de evento quieres que te avise (geocerca, movimiento, contacto…). El reloj consulta los tipos de evento que configuraste en Notificaciones en Traccar con la frecuencia que elijas (como mínimo cada 15 minutos). Sin Firebase y sin nada que configurar en el servidor.
 
 ELIGE TU MAPA
 OpenStreetMap y OpenTopoMap no necesitan clave. LocationIQ, MapTiler, TomTom, HERE y Mapbox están disponibles si tienes una clave. Las claves nunca se escriben en el reloj: la app las lee de los atributos de tu Traccar, con los mismos nombres que usa la app web.

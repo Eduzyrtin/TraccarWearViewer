@@ -13,7 +13,7 @@ UNE TUILE PAR PERSONNE OU PAR VÉHICULE
 Ajoutez la tuile Carte Traccar une fois pour chaque appareil que vous voulez garder à l'œil, par exemple la voiture de votre conjoint. Elle montre les environs avec des boutons de zoom. Touchez le nom pour choisir un autre appareil, l'heure pour actualiser, la carte pour ouvrir l'application centrée dessus. La tuile demande une mise à jour chaque fois qu'elle apparaît à l'écran.
 
 ALERTES, UNIQUEMENT SI VOUS LE SOUHAITEZ
-Désactivées par défaut. Choisissez « seulement quand le téléphone n'est pas à proximité » ou « toujours ». La montre vérifie toutes les 15 minutes les types d'événements que vous avez configurés dans Notifications sur Traccar. Pas de Firebase et rien à configurer sur le serveur.
+Désactivées par défaut. Choisissez « seulement quand le téléphone n'est pas à proximité » ou « toujours », puis, appareil par appareil, les types d'événements qui déclenchent une alerte (géoclôture, mouvement, contact…). La montre vérifie les types d'événements que vous avez configurés dans Notifications sur Traccar aussi souvent que vous le choisissez (au minimum toutes les 15 minutes). Pas de Firebase et rien à configurer sur le serveur.
 
 CHOISISSEZ VOTRE CARTE
 OpenStreetMap et OpenTopoMap n'ont pas besoin de clé. LocationIQ, MapTiler, TomTom, HERE et Mapbox sont disponibles si vous avez une clé. Les clés ne se saisissent jamais sur la montre : l'application les lit dans les attributs de votre Traccar, avec les mêmes noms que l'application web.

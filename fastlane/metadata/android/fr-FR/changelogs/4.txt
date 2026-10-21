@@ -1,0 +1,1 @@
+Choisissez l'intervalle d'actualisation que vous voulez : minutes, heures ou jours. Les alertes se règlent désormais par appareil et par type d'événement (géoclôture, mouvement, contact, alarmes…), comme dans Traccar. La tuile de carte se charge aussi plus fiablement.

@@ -13,7 +13,7 @@ UN MOSAICO POR PERSOA OU VEHÍCULO
 Engade o mosaico Mapa Traccar unha vez por cada dispositivo que queiras vixiar, por exemplo o coche da túa parella. Amosa a zona ao seu redor con botóns de zoom. Toca o nome para escoller outro dispositivo, a hora para actualizar e o mapa para abrir a app centrada nel. O mosaico pide unha actualización cada vez que aparece na pantalla.
 
 AVISOS, SÓ SE OS QUERES
-Desactivados por defecto. Escolle "só cando o móbil non está preto" ou "sempre". O reloxo consulta cada 15 minutos os tipos de evento que configuraches en Notificacións en Traccar. Sen Firebase e sen nada que configurar no servidor.
+Desactivados por defecto. Escolle "só cando o móbil non está preto" ou "sempre" e, despois, escolle por dispositivo de que tipos de evento queres que che avise (xeocerca, movemento, contacto…). O reloxo consulta os tipos de evento que configuraches en Notificacións en Traccar coa frecuencia que escollas (como mínimo cada 15 minutos). Sen Firebase e sen nada que configurar no servidor.
 
 ESCOLLE O TEU MAPA
 OpenStreetMap e OpenTopoMap non precisan clave. LocationIQ, MapTiler, TomTom, HERE e Mapbox están dispoñibles se tes unha clave. As claves nunca se escriben no reloxo: a app leas dos atributos do teu Traccar, cos mesmos nomes que usa a app web.

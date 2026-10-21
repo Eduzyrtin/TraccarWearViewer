@@ -13,7 +13,7 @@ A TILE PER PERSON OR VEHICLE
 Add the Traccar map tile once for each device you want to keep an eye on, for example your partner's car. It shows the area around it with zoom buttons. Tap the name to pick another device, tap the time to refresh, tap the map to open the app centered on it. The tile asks for an update every time it comes into view.
 
 ALERTS, ONLY IF YOU WANT THEM
-Off by default. Choose "only when the phone is not nearby" or "always". The watch checks the event types you configured under Notifications in Traccar every 15 minutes. No Firebase and nothing to set up on the server.
+Off by default. Choose "only when the phone is not nearby" or "always", then pick per device which event types alert you (geofence, movement, ignition…). The watch checks the event types you configured under Notifications in Traccar as often as you choose (at least every 15 minutes). No Firebase and nothing to set up on the server.
 
 CHOOSE YOUR MAP
 OpenStreetMap and OpenTopoMap need no key. LocationIQ, MapTiler, TomTom, HERE and Mapbox are available if you have a key. Keys are never typed on the watch: the app reads them from your Traccar attributes, using the same names as the web app.

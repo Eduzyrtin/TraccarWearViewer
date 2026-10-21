@@ -1,0 +1,1 @@
+Choose the refresh interval you want: minutes, hours or days. Alerts can now be set per device and per event type (geofence, movement, ignition, alarms…), like in Traccar. The map tile also loads more reliably.

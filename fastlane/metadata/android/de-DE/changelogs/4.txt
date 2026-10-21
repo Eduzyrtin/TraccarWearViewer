@@ -1,0 +1,1 @@
+Wähle das Aktualisierungsintervall frei: Minuten, Stunden oder Tage. Hinweise lassen sich jetzt pro Gerät und Ereignistyp einstellen (Geofence, Bewegung, Zündung, Alarme …), wie in Traccar. Die Karten-Kachel lädt außerdem zuverlässiger.

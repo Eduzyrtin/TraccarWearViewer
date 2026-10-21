@@ -1,0 +1,1 @@
+Escolha o intervalo de atualização que quiser: minutos, horas ou dias. Os alertas agora escolhem-se por dispositivo e por tipo de evento (geovedação, movimento, ignição, alarmes…), como no Traccar. O mosaico do mapa também carrega com mais fiabilidade.

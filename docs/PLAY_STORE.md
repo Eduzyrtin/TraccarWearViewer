@@ -25,6 +25,11 @@ Paquete `com.sanabria.traccarwearosviewer` · solo Wear OS · ficha en [`fastlan
 - **Enlace al repositorio**: la descripción apunta a `github.com/Eduzyrtin/TraccarWearViewer`. Si el repo sigue privado, quita
   la sección «FREE AND OPEN SOURCE» (y su traducción) de los 9 idiomas, o haz el repo público antes de publicar.
 
+## Versión 4 (0.2.0)
+
+Primera con funciones nuevas desde la 0.1.0: intervalo de refresco libre (minutos, horas o días) y avisos por dispositivo y tipo de
+evento. Novedades en `changelogs/4.txt` (9 idiomas); la ficha (`full_description.txt`) ya no dice «cada 15 minutos».
+
 ## Versiones 2 (0.1.1) y 3 (0.1.2)
 
 La versión 1 (0.1.0) quedó como «sustituida por otra versión · sin publicar» tras el rechazo automático del primer envío y la

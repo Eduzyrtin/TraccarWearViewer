@@ -13,7 +13,7 @@ LAUZA BAT PERTSONA EDO IBILGAILU BAKOITZEKO
 Gehitu Traccar mapa lauza behin zaindu nahi duzun gailu bakoitzeko, adibidez zure bikotekidearen autoa. Inguruko eremua erakusten du zoom-botoiekin. Ukitu izena beste gailu bat aukeratzeko, ordua eguneratzeko eta mapa aplikazioa hura erdian dela irekitzeko. Lauzak eguneraketa bat eskatzen du pantailan agertzen den bakoitzean.
 
 ABISUAK, NAHI BADITUZU BAKARRIK
-Lehenespenez desaktibatuta. Aukeratu "mugikorra gertu ez dagoenean bakarrik" edo "beti". Erlojuak 15 minuturo kontsultatzen ditu Traccar-eko Jakinarazpenetan konfiguratu zenituen gertaera motak. Firebase gabe eta zerbitzarian ezer konfiguratu gabe.
+Lehenespenez desaktibatuta. Aukeratu "mugikorra gertu ez dagoenean bakarrik" edo "beti" eta, gero, aukeratu gailu bakoitzeko zer gertaera motatan abisatu nahi duzun (geobarrera, mugimendua, kontaktua…). Erlojuak Traccar-eko Jakinarazpenetan konfiguratu zenituen gertaera motak kontsultatzen ditu, nahi duzun maiztasunarekin (gutxienez 15 minuturo). Firebase gabe eta zerbitzarian ezer konfiguratu gabe.
 
 AUKERATU ZURE MAPA
 OpenStreetMap eta OpenTopoMap-ek ez dute gakorik behar. LocationIQ, MapTiler, TomTom, HERE eta Mapbox erabilgarri daude gako bat baduzu. Gakoak ez dira inoiz erlojuan idazten: aplikazioak zure Traccar-eko atributuetatik irakurtzen ditu, web aplikazioak erabiltzen dituen izen berekin.

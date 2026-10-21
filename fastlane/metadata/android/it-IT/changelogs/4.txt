@@ -1,0 +1,1 @@
+Scegli l'intervallo di aggiornamento che preferisci: minuti, ore o giorni. Gli avvisi ora si scelgono per dispositivo e per tipo di evento (geofence, movimento, accensione, allarmi…), come in Traccar. Anche il riquadro della mappa si carica in modo più affidabile.
