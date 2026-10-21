@@ -75,7 +75,7 @@ object EventNotifier {
                 R.string.event_alarm,
                 (event.attributes["alarm"] as? JsonPrimitive)?.contentOrNull.orEmpty(),
             )
-            else -> event.type
+            else -> EventType.fromId(event.type)?.let { context.getString(it.label) } ?: event.type
         }
     }
 }

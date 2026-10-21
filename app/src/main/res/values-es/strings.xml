@@ -33,8 +33,8 @@
 
     <string name="notifications">Avisos</string>
     <string name="notifications_off">Desactivados</string>
-    <string name="notifications_away">Solo con el móvil lejos (cada 15 min)</string>
-    <string name="notifications_always">Siempre (cada 15 min)</string>
+    <string name="notifications_away">Solo con el móvil lejos</string>
+    <string name="notifications_always">Siempre</string>
 
     <string name="map_type">Mapa</string>
     <string name="map_buttons_autohide">Ocultar botones del mapa</string>
@@ -69,4 +69,42 @@
     <string name="event_text_message">Mensaje de texto recibido</string>
     <string name="event_driver_changed">Cambio de conductor</string>
     <string name="event_alarm">Alarma: %1$s</string>
+
+    <string name="alerts_by_device">Avisos por dispositivo</string>
+    <string name="alerts_by_device_summary">Elige dispositivos y tipos de evento</string>
+    <string name="alerts_all_events">Todos los eventos</string>
+    <string name="alerts_off">Desactivados</string>
+    <string name="alerts_some_off">Algunos eventos desactivados</string>
+    <string name="alerts_for_device">Avisos de este dispositivo</string>
+    <string name="alerts_no_rules">No hay notificaciones configuradas en Traccar para este usuario</string>
+    <string name="alerts_rules_hint">Solo se comprueban los tipos de evento de tus notificaciones de Traccar.</string>
+    <string name="refresh_interval">Intervalo de refresco</string>
+    <string name="refresh_every">Cada</string>
+    <string name="refresh_unit">Unidad</string>
+    <string name="refresh_interval_hint">Lo usan el tile del mapa y la comprobación de avisos. Android nunca comprueba los avisos con más frecuencia que cada 15 minutos.</string>
+    <string name="unit_minutes">Minutos</string>
+    <string name="unit_hours">Horas</string>
+    <string name="unit_days">Días</string>
+    <string name="interval_days">%1$d d</string>
+
+    <string name="event_type_command_result">Resultado del comando</string>
+    <string name="event_type_device_online">Dispositivo en línea</string>
+    <string name="event_type_device_unknown">Dispositivo desconocido</string>
+    <string name="event_type_device_offline">Dispositivo desconectado</string>
+    <string name="event_type_device_inactive">Dispositivo inactivo</string>
+    <string name="event_type_queued_command_sent">Comando en cola enviado</string>
+    <string name="event_type_device_moving">Dispositivo en movimiento</string>
+    <string name="event_type_device_stopped">Dispositivo detenido</string>
+    <string name="event_type_device_overspeed">Exceso de velocidad</string>
+    <string name="event_type_device_fuel_drop">Bajada de combustible</string>
+    <string name="event_type_device_fuel_increase">Subida de combustible</string>
+    <string name="event_type_geofence_enter">Entrada en geocerca</string>
+    <string name="event_type_geofence_exit">Salida de geocerca</string>
+    <string name="event_type_alarm">Alarma</string>
+    <string name="event_type_ignition_on">Contacto encendido</string>
+    <string name="event_type_ignition_off">Contacto apagado</string>
+    <string name="event_type_maintenance">Mantenimiento pendiente</string>
+    <string name="event_type_text_message">Mensaje de texto</string>
+    <string name="event_type_driver_changed">Cambio de conductor</string>
+    <string name="event_type_media">Multimedia</string>
 </resources>

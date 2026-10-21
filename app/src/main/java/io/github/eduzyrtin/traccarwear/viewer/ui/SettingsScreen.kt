@@ -28,8 +28,15 @@ import io.github.eduzyrtin.traccarwear.viewer.data.Account
 import io.github.eduzyrtin.traccarwear.viewer.data.NotificationMode
 
 @Composable
-fun SettingsScreen(viewModel: ViewerViewModel, account: Account, onOpenMaps: () -> Unit) {
+fun SettingsScreen(
+    viewModel: ViewerViewModel,
+    account: Account,
+    onOpenMaps: () -> Unit,
+    onOpenAlertDevices: () -> Unit,
+    onOpenRefresh: () -> Unit,
+) {
     val context = LocalContext.current
+    val refreshInterval by viewModel.refreshInterval.collectAsStateWithLifecycle()
     val notificationMode by viewModel.notificationMode.collectAsStateWithLifecycle()
     val mapChoice by viewModel.mapChoice.collectAsStateWithLifecycle()
     val snapshot by viewModel.snapshot.collectAsStateWithLifecycle()
@@ -83,6 +90,24 @@ fun SettingsScreen(viewModel: ViewerViewModel, account: Account, onOpenMaps: () 
                     modifier = Modifier.fillMaxWidth(),
                     label = { Text(stringResource(R.string.notifications)) },
                     secondaryLabel = { Text(stringResource(notificationMode.label()), maxLines = 3) },
+                )
+            }
+            item {
+                Button(
+                    onClick = onOpenAlertDevices,
+                    colors = ButtonDefaults.filledTonalButtonColors(),
+                    modifier = Modifier.fillMaxWidth(),
+                    label = { Text(stringResource(R.string.alerts_by_device)) },
+                    secondaryLabel = { Text(stringResource(R.string.alerts_by_device_summary), maxLines = 2) },
+                )
+            }
+            item {
+                Button(
+                    onClick = onOpenRefresh,
+                    colors = ButtonDefaults.filledTonalButtonColors(),
+                    modifier = Modifier.fillMaxWidth(),
+                    label = { Text(stringResource(R.string.refresh_interval)) },
+                    secondaryLabel = { Text(refreshInterval.label()) },
                 )
             }
             item {

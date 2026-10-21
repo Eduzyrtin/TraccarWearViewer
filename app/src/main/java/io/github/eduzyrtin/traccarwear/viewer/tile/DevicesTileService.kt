@@ -80,7 +80,8 @@ class DevicesTileService : TileService() {
         val clicked = requestParams.currentState.lastClickableId
         val deviceConfiguration = requestParams.deviceConfiguration
         var resourcesVersion = MapImages.NONE
-        var freshness = FRESHNESS_MILLIS
+        // El intervalo de refresco elegido en Ajustes
+        var freshness = ViewerStore.refreshInterval(context).first().minutes * 60_000L
 
         val account = ViewerStore.account(context).first()
         // El servicio puede arrancar antes de que la aplicación lo haya fijado
@@ -299,7 +300,6 @@ class DevicesTileService : TileService() {
         const val OPEN_ID = "open"
         const val PICK_ID = "pick"
         const val DEFAULT_ZOOM = 15
-        const val FRESHNESS_MILLIS = 10 * 60_000L
         const val RETRY_MILLIS = 15_000L
         // Si los datos tienen menos de esto, no se vuelven a pedir (zoom, reaperturas seguidas)
         const val MIN_REFRESH_MILLIS = 20_000L

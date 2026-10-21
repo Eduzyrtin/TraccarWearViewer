@@ -36,8 +36,8 @@
 
     <string name="notifications">Alerts</string>
     <string name="notifications_off">Off</string>
-    <string name="notifications_away">Only when the phone is not nearby (checks every 15 min)</string>
-    <string name="notifications_always">Always (checks every 15 min)</string>
+    <string name="notifications_away">Only when the phone is not nearby</string>
+    <string name="notifications_always">Always</string>
 
     <string name="map_type">Map</string>
     <string name="map_buttons_autohide">Hide map buttons</string>
@@ -72,4 +72,44 @@
     <string name="event_text_message">Text message received</string>
     <string name="event_driver_changed">Driver changed</string>
     <string name="event_alarm">Alarm: %1$s</string>
+
+    <string name="alerts_by_device">Alerts by device</string>
+    <string name="alerts_by_device_summary">Choose devices and event types</string>
+    <string name="alerts_all_events">All events</string>
+    <string name="alerts_off">Off</string>
+    <string name="alerts_some_off">Some events off</string>
+    <string name="alerts_for_device">Alerts for this device</string>
+    <string name="alerts_no_rules">No notifications are set up in Traccar for this user</string>
+    <string name="alerts_rules_hint">Only the event types in your Traccar notifications are checked.</string>
+    <string name="refresh_interval">Refresh interval</string>
+    <string name="refresh_every">Every</string>
+    <string name="refresh_unit">Unit</string>
+    <string name="refresh_interval_hint">Used by the map tile and by the alert checks. Android never checks alerts more often than every 15 minutes.</string>
+    <string name="unit_minutes">Minutes</string>
+    <string name="unit_hours">Hours</string>
+    <string name="unit_days">Days</string>
+    <string name="interval_minutes" translatable="false">%1$d min</string>
+    <string name="interval_hours" translatable="false">%1$d h</string>
+    <string name="interval_days">%1$d d</string>
+
+    <string name="event_type_command_result">Command result</string>
+    <string name="event_type_device_online">Device online</string>
+    <string name="event_type_device_unknown">Device unknown</string>
+    <string name="event_type_device_offline">Device offline</string>
+    <string name="event_type_device_inactive">Device inactive</string>
+    <string name="event_type_queued_command_sent">Queued command sent</string>
+    <string name="event_type_device_moving">Device moving</string>
+    <string name="event_type_device_stopped">Device stopped</string>
+    <string name="event_type_device_overspeed">Speed limit exceeded</string>
+    <string name="event_type_device_fuel_drop">Fuel drop</string>
+    <string name="event_type_device_fuel_increase">Fuel increase</string>
+    <string name="event_type_geofence_enter">Geofence entered</string>
+    <string name="event_type_geofence_exit">Geofence exited</string>
+    <string name="event_type_alarm">Alarm</string>
+    <string name="event_type_ignition_on">Ignition on</string>
+    <string name="event_type_ignition_off">Ignition off</string>
+    <string name="event_type_maintenance">Maintenance required</string>
+    <string name="event_type_text_message">Text message</string>
+    <string name="event_type_driver_changed">Driver changed</string>
+    <string name="event_type_media">Media</string>
 </resources>

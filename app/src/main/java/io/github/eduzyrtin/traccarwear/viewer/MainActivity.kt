@@ -21,13 +21,17 @@ import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import io.github.eduzyrtin.traccarwear.viewer.data.Account
+import io.github.eduzyrtin.traccarwear.viewer.data.RefreshInterval
 import io.github.eduzyrtin.traccarwear.viewer.ui.AccountState
+import io.github.eduzyrtin.traccarwear.viewer.ui.AlertDevicesScreen
+import io.github.eduzyrtin.traccarwear.viewer.ui.DeviceAlertsScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.DeviceScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.DevicesScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.LoginField
 import io.github.eduzyrtin.traccarwear.viewer.ui.LoginScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.MapScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.MapTypeScreen
+import io.github.eduzyrtin.traccarwear.viewer.ui.RefreshIntervalScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.SettingsScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.TextInputScreen
 import io.github.eduzyrtin.traccarwear.viewer.ui.ViewerViewModel
@@ -128,10 +132,42 @@ private fun MainNavigation(viewModel: ViewerViewModel, account: Account) {
         }
         composable("device/{id}") { entry ->
             val id = entry.arguments?.getString("id")?.toLongOrNull() ?: return@composable
-            DeviceScreen(viewModel, id)
+            DeviceScreen(viewModel, id, onOpenAlerts = { navController.navigate("alerts/$id") })
         }
         composable("settings") {
-            SettingsScreen(viewModel, account, onOpenMaps = { navController.navigate("maps") })
+            SettingsScreen(
+                viewModel,
+                account,
+                onOpenMaps = { navController.navigate("maps") },
+                onOpenAlertDevices = { navController.navigate("alerts") },
+                onOpenRefresh = { navController.navigate("refresh") },
+            )
+        }
+        composable("alerts") {
+            AlertDevicesScreen(viewModel, onOpenDevice = { id -> navController.navigate("alerts/$id") })
+        }
+        composable("alerts/{id}") { entry ->
+            val id = entry.arguments?.getString("id")?.toLongOrNull() ?: return@composable
+            DeviceAlertsScreen(viewModel, id)
+        }
+        composable("refresh") {
+            RefreshIntervalScreen(viewModel, onEditValue = { navController.navigate("refresh_value") })
+        }
+        composable("refresh_value") {
+            val interval by viewModel.refreshInterval.collectAsStateWithLifecycle()
+            TextInputScreen(
+                title = stringResource(R.string.refresh_every),
+                initialValue = interval.value.toString(),
+                hint = stringResource(R.string.refresh_every),
+                keyboardType = KeyboardType.Number,
+                onSave = { value ->
+                    // Solo cifras; si no hay ninguna, se deja el valor que había
+                    value.filter { it.isDigit() }.toLongOrNull()?.let {
+                        viewModel.setRefreshInterval(RefreshInterval.of(it, interval.unit))
+                    }
+                    navController.popBackStack()
+                },
+            )
         }
         composable("maps") {
             MapTypeScreen(viewModel, onDone = { navController.popBackStack() })

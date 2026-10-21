@@ -33,8 +33,8 @@
 
     <string name="notifications">Hinweise</string>
     <string name="notifications_off">Aus</string>
-    <string name="notifications_away">Nur wenn das Handy nicht in der Nähe ist (Prüfung alle 15 Min.)</string>
-    <string name="notifications_always">Immer (Prüfung alle 15 Min.)</string>
+    <string name="notifications_away">Nur wenn das Handy nicht in der Nähe ist</string>
+    <string name="notifications_always">Immer</string>
 
     <string name="map_type">Karte</string>
     <string name="map_buttons_autohide">Kartenschaltflächen ausblenden</string>
@@ -69,4 +69,42 @@
     <string name="event_text_message">Textnachricht empfangen</string>
     <string name="event_driver_changed">Fahrerwechsel</string>
     <string name="event_alarm">Alarm: %1$s</string>
+
+    <string name="alerts_by_device">Hinweise pro Gerät</string>
+    <string name="alerts_by_device_summary">Geräte und Ereignistypen wählen</string>
+    <string name="alerts_all_events">Alle Ereignisse</string>
+    <string name="alerts_off">Aus</string>
+    <string name="alerts_some_off">Einige Ereignisse aus</string>
+    <string name="alerts_for_device">Hinweise für dieses Gerät</string>
+    <string name="alerts_no_rules">In Traccar sind für diesen Benutzer keine Benachrichtigungen eingerichtet</string>
+    <string name="alerts_rules_hint">Geprüft werden nur die Ereignistypen deiner Traccar-Benachrichtigungen.</string>
+    <string name="refresh_interval">Aktualisierungsintervall</string>
+    <string name="refresh_every">Alle</string>
+    <string name="refresh_unit">Einheit</string>
+    <string name="refresh_interval_hint">Gilt für die Karten-Kachel und die Prüfung der Hinweise. Android prüft Hinweise höchstens alle 15 Minuten.</string>
+    <string name="unit_minutes">Minuten</string>
+    <string name="unit_hours">Stunden</string>
+    <string name="unit_days">Tage</string>
+    <string name="interval_days">%1$d T</string>
+
+    <string name="event_type_command_result">Befehlsergebnis</string>
+    <string name="event_type_device_online">Gerät online</string>
+    <string name="event_type_device_unknown">Gerät unbekannt</string>
+    <string name="event_type_device_offline">Gerät offline</string>
+    <string name="event_type_device_inactive">Gerät inaktiv</string>
+    <string name="event_type_queued_command_sent">Befehl aus Warteschlange gesendet</string>
+    <string name="event_type_device_moving">Gerät in Bewegung</string>
+    <string name="event_type_device_stopped">Gerät gestoppt</string>
+    <string name="event_type_device_overspeed">Geschwindigkeitslimit überschritten</string>
+    <string name="event_type_device_fuel_drop">Kraftstoffabfall</string>
+    <string name="event_type_device_fuel_increase">Kraftstoffanstieg</string>
+    <string name="event_type_geofence_enter">Geofence betreten</string>
+    <string name="event_type_geofence_exit">Geofence verlassen</string>
+    <string name="event_type_alarm">Alarm</string>
+    <string name="event_type_ignition_on">Zündung an</string>
+    <string name="event_type_ignition_off">Zündung aus</string>
+    <string name="event_type_maintenance">Wartung erforderlich</string>
+    <string name="event_type_text_message">Textnachricht</string>
+    <string name="event_type_driver_changed">Fahrerwechsel</string>
+    <string name="event_type_media">Medien</string>
 </resources>

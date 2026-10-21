@@ -9,10 +9,12 @@ import io.github.eduzyrtin.traccarwear.viewer.api.HttpException
 import io.github.eduzyrtin.traccarwear.viewer.api.UnauthorizedException
 import io.github.eduzyrtin.traccarwear.viewer.data.Account
 import io.github.eduzyrtin.traccarwear.viewer.data.NotificationMode
+import io.github.eduzyrtin.traccarwear.viewer.data.RefreshInterval
 import io.github.eduzyrtin.traccarwear.viewer.data.Snapshot
 import io.github.eduzyrtin.traccarwear.viewer.data.ViewerRepository
 import io.github.eduzyrtin.traccarwear.viewer.data.ViewerStore
 import io.github.eduzyrtin.traccarwear.viewer.map.MapType
+import io.github.eduzyrtin.traccarwear.viewer.notify.AlertFilter
 import io.github.eduzyrtin.traccarwear.viewer.notify.EventsWorker
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -75,6 +77,15 @@ class ViewerViewModel(application: Application) : AndroidViewModel(application) 
     val notificationMode: StateFlow<NotificationMode> = ViewerStore.notificationMode(application)
         .stateIn(viewModelScope, SharingStarted.Eagerly, NotificationMode.OFF)
 
+    val refreshInterval: StateFlow<RefreshInterval> = ViewerStore.refreshInterval(application)
+        .stateIn(viewModelScope, SharingStarted.Eagerly, RefreshInterval.DEFAULT)
+
+    val alertFilter: StateFlow<AlertFilter> = ViewerStore.alertFilter(application)
+        .stateIn(viewModelScope, SharingStarted.Eagerly, AlertFilter())
+
+    private val _ruleTypes = MutableStateFlow<Set<String>?>(null)
+    val ruleTypes: StateFlow<Set<String>?> = _ruleTypes.asStateFlow()
+
     val autoHideMapControls: StateFlow<Boolean> = ViewerStore.autoHideMapControls(application)
         .stateIn(viewModelScope, SharingStarted.Eagerly, true)
 
@@ -125,6 +136,35 @@ class ViewerViewModel(application: Application) : AndroidViewModel(application) 
         viewModelScope.launch {
             ViewerStore.setNotificationMode(app, mode)
             if (mode == NotificationMode.OFF) EventsWorker.cancel(app) else EventsWorker.schedule(app)
+        }
+    }
+
+    fun setRefreshInterval(interval: RefreshInterval) {
+        viewModelScope.launch {
+            ViewerStore.setRefreshInterval(app, interval)
+            if (notificationMode.value != NotificationMode.OFF) EventsWorker.schedule(app)
+            ViewerRepository.requestTileUpdate(app)
+        }
+    }
+
+    fun setDeviceAlertsMuted(deviceId: Long, muted: Boolean) {
+        viewModelScope.launch { ViewerStore.setDeviceMuted(app, deviceId, muted) }
+    }
+
+    fun setDeviceAlertType(deviceId: Long, type: String, enabled: Boolean) {
+        viewModelScope.launch { ViewerStore.setAlertType(app, deviceId, type, enabled) }
+    }
+
+    // Tipos de las notificaciones del usuario en el servidor; si no se pueden leer, se ofrecen todos
+    fun loadRuleTypes() {
+        viewModelScope.launch {
+            try {
+                val api = ViewerRepository.api(app) ?: return@launch
+                _ruleTypes.value = api.notificationRules().map { it.type }.toSet()
+            } catch (_: IOException) {
+                // se queda lo que hubiera
+            } catch (_: SerializationException) {
+            }
         }
     }
 

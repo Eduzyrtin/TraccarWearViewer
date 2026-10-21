@@ -27,7 +27,7 @@ import io.github.eduzyrtin.traccarwear.viewer.api.Position
 import java.util.Locale
 
 @Composable
-fun DeviceScreen(viewModel: ViewerViewModel, deviceId: Long) {
+fun DeviceScreen(viewModel: ViewerViewModel, deviceId: Long, onOpenAlerts: () -> Unit) {
     val context = LocalContext.current
     val snapshot by viewModel.snapshot.collectAsStateWithLifecycle()
     val favorites by viewModel.favorites.collectAsStateWithLifecycle()
@@ -63,6 +63,14 @@ fun DeviceScreen(viewModel: ViewerViewModel, deviceId: Long) {
                         label = { Text(stringResource(R.string.open_map)) },
                     )
                 }
+            }
+            item {
+                Button(
+                    onClick = onOpenAlerts,
+                    colors = ButtonDefaults.filledTonalButtonColors(),
+                    modifier = Modifier.fillMaxWidth(),
+                    label = { Text(stringResource(R.string.notifications)) },
+                )
             }
             item {
                 val pinned = deviceId in favorites
