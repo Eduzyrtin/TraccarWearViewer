@@ -21,6 +21,9 @@ class ViewerApplication : Application() {
         EventNotifier.createChannel(this)
         TileLoader.init(this)
         scope.launch {
+            ViewerStore.account(this@ViewerApplication).collect { TileLoader.setServer(it?.serverUrl) }
+        }
+        scope.launch {
             val loggedIn = ViewerStore.account(this@ViewerApplication).first() != null
             if (loggedIn && ViewerStore.notificationMode(this@ViewerApplication).first() != NotificationMode.OFF) {
                 EventsWorker.schedule(this@ViewerApplication)

@@ -22,7 +22,7 @@ object MapBitmapRenderer {
         sizePx: Int,
         density: Float,
         markerColor: Int,
-    ): ByteArray {
+    ): Result {
         val tilePx = 256.0 * density
         val world = WebMercator.worldSize(zoom, tilePx)
         val centerX = WebMercator.x(longitude, world)
@@ -53,10 +53,14 @@ object MapBitmapRenderer {
         paint.color = markerColor
         canvas.drawCircle(center, center, radius, paint)
 
-        return ByteArrayOutputStream().use { out ->
-            bitmap.compress(Bitmap.CompressFormat.WEBP_LOSSY, 75, out)
+        val bytes = ByteArrayOutputStream().use { out ->
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 85, out)
             bitmap.recycle()
             out.toByteArray()
         }
+        return Result(bytes, complete = bitmaps.all { it != null })
     }
+
+    /** [complete] es falso si algún mosaico no se pudo descargar (el fondo liso ocupa su sitio). */
+    class Result(val bytes: ByteArray, val complete: Boolean)
 }

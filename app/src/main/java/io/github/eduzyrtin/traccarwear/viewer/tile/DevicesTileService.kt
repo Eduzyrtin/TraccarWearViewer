@@ -34,6 +34,7 @@ import io.github.eduzyrtin.traccarwear.viewer.data.ViewerRepository
 import io.github.eduzyrtin.traccarwear.viewer.data.ViewerStore
 import io.github.eduzyrtin.traccarwear.viewer.map.MapBitmapRenderer
 import io.github.eduzyrtin.traccarwear.viewer.map.MapStyle
+import io.github.eduzyrtin.traccarwear.viewer.map.TileLoader
 import io.github.eduzyrtin.traccarwear.viewer.ui.parseTime
 import io.github.eduzyrtin.traccarwear.viewer.ui.statusColor
 import kotlinx.coroutines.Dispatchers
@@ -79,8 +80,13 @@ class DevicesTileService : TileService() {
         val clicked = requestParams.currentState.lastClickableId
         val deviceConfiguration = requestParams.deviceConfiguration
         var resourcesVersion = MapImages.NONE
+        var freshness = FRESHNESS_MILLIS
 
-        val layout = if (ViewerStore.account(context).first() == null) {
+        val account = ViewerStore.account(context).first()
+        // El servicio puede arrancar antes de que la aplicación lo haya fijado
+        TileLoader.setServer(account?.serverUrl)
+
+        val layout = if (account == null) {
             materialScope(context, deviceConfiguration) {
                 message(context.getString(R.string.tile_sign_in), openApp(context, null))
             }
@@ -106,14 +112,16 @@ class DevicesTileService : TileService() {
                 val image = MapBitmapRenderer.render(
                     style, position.latitude, position.longitude, zoom, sizePx, density, statusColor(device.status),
                 )
-                resourcesVersion = MapImages.save(context, image, sizePx)
+                resourcesVersion = MapImages.save(context, image.bytes, sizePx)
+                // Si faltan mosaicos (sin red a tiempo), se vuelve a intentar pronto
+                if (!image.complete) freshness = RETRY_MILLIS
                 materialScope(context, deviceConfiguration) { mapLayout(context, tileId, device) }
             }
         }
 
         return TileBuilders.Tile.Builder()
             .setResourcesVersion(resourcesVersion)
-            .setFreshnessIntervalMillis(FRESHNESS_MILLIS)
+            .setFreshnessIntervalMillis(freshness)
             .setTileTimeline(TimelineBuilders.Timeline.fromLayoutElement(layout))
             .build()
     }
@@ -248,7 +256,7 @@ class DevicesTileService : TileService() {
                     .setData(bytes)
                     .setWidthPx(sizePx)
                     .setHeightPx(sizePx)
-                    .setFormat(ResourceBuilders.IMAGE_FORMAT_UNDEFINED)
+                    .setFormat(ResourceBuilders.IMAGE_FORMAT_UNDEFINED) // JPEG/PNG codificado
                     .build(),
             )
             .build()
@@ -292,8 +300,9 @@ class DevicesTileService : TileService() {
         const val PICK_ID = "pick"
         const val DEFAULT_ZOOM = 15
         const val FRESHNESS_MILLIS = 10 * 60_000L
+        const val RETRY_MILLIS = 15_000L
         // Si los datos tienen menos de esto, no se vuelven a pedir (zoom, reaperturas seguidas)
         const val MIN_REFRESH_MILLIS = 20_000L
-        const val REFRESH_TIMEOUT_MILLIS = 6_000L
+        const val REFRESH_TIMEOUT_MILLIS = 4_000L
     }
 }
