@@ -11,7 +11,7 @@ Paquete `com.sanabria.traccarwearosviewer` · solo Wear OS · ficha en [`fastlan
    `title.txt`, `short_description.txt` y `full_description.txt` de su carpeta.
 2. **Icono**: `en-US/images/icon.png` (vale para todos los idiomas).
 3. **Gráfico de funciones** (obligatorio): `<idioma>/images/featureGraphic.png`, con el lema traducido.
-4. **Capturas de Wear OS**: las de `en-US/images/wearScreenshots/` (6; 1:1, entre 384 y 3840 px). Valen para todos los idiomas.
+4. **Capturas de Wear OS**: las de `en-US/images/wearScreenshots/` (8; 1:1, entre 384 y 3840 px). Valen para todos los idiomas.
 5. **Novedades** de cada versión: `<idioma>/changelogs/<versionCode>.txt`.
 6. Sin capturas de móvil ni tableta: la app no tiene versión de teléfono.
 
