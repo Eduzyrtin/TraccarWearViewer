@@ -5,7 +5,7 @@
 ### Your Traccar devices on a map, right on your wrist.
 
 A small Wear OS app for your own [Traccar](https://www.traccar.org) server: see where your devices are,
-follow one of them live, pin a map tile per person or vehicle, and get alerts when you are away from your phone.<br>
+follow one of them live, pin a map tile per person or vehicle, and get alerts, per device and event type, when you are away from your phone.<br>
 No Firebase and nothing to configure on the server.
 
 [![Wear OS 3+](https://img.shields.io/badge/Wear%20OS-3%2B-4285F4?logo=wearos&logoColor=white)](#requirements)
@@ -60,11 +60,16 @@ This is an independent project and is not affiliated with or endorsed by Traccar
 ### 🧩 A tile per person or vehicle
 - Add the tile once for each device you want to keep an eye on, for example **your partner's car**: it shows the area around it with no coordinates, and **+/−** zoom buttons.
 - Tap the **name** to pick another device, tap the **time** to refresh, tap the **map** to open the app centered on it.
-- The tile asks for an update **every time it comes into view**, so it shows the latest position.
+- The tile asks for an update **every time it comes into view**, so it shows the latest position. If some map pieces cannot be downloaded in time, it retries after a few seconds.
 
 ### 🔔 Alerts, only if you want them
 - Off by default. Choose *only when the phone is not nearby* (with the phone connected over Bluetooth the official Traccar Manager already notifies you) or *always*.
-- The watch checks the event types you configured under *Notifications* in Traccar, every 15 minutes. **No Firebase, no server setup.**
+- The watch checks the event types you configured under *Notifications* in Traccar. **No Firebase, no server setup.**
+- **Alerts by device**: in *Settings › Alerts by device* (or from a device's page) choose which devices alert you and for which event types, using the same types as Traccar (geofence, moving, stopped, ignition, alarm, overspeed…). For example, mute your own watch and keep only the motorbikes, or only get *moving* alerts for the cars.
+
+### ⏱️ Your own refresh interval
+- *Settings › Refresh interval*: type any number and choose **minutes, hours or days**. It sets how often the tile refreshes on its own and how often the watch looks for new alerts.
+- Android never runs background checks more often than every 15 minutes, so alerts use whichever is larger: your interval or 15 minutes. The tile follows your interval exactly, and it also refreshes every time it comes into view.
 
 ### ⌨️ Made for typing on a watch
 - Nothing is masked, long values wrap onto several lines and every text field has a **Clear** button.
@@ -158,9 +163,9 @@ Yes, that is the point of the alerts mode *only when the phone is not nearby*. T
 </details>
 
 <details>
-<summary><b>Why do alerts take up to 15 minutes?</b></summary>
+<summary><b>Why do alerts take at least 15 minutes?</b></summary>
 
-That is the shortest interval Android's WorkManager allows for periodic background work, and a persistent connection would cost a lot of battery. A real-time option over WebSocket is on the roadmap.
+That is the shortest interval Android's WorkManager allows for periodic background work, and a persistent connection would cost a lot of battery. You can make it longer in *Settings › Refresh interval*, never shorter. A real-time option over WebSocket is on the roadmap.
 </details>
 
 <details>
@@ -233,7 +238,7 @@ Release builds ignore this file. Do not share a debug APK built with it: the val
 | `map/` | Raster map: map types, projection, tile download and cache, image rendering for the tile |
 | `data/` | DataStore storage and repository |
 | `tile/` | Map tile (one device per tile) and its image cache |
-| `notify/` | Periodic event check and notifications |
+| `notify/` | Periodic event check, per-device alert filter and notifications |
 | `ui/` | Wear OS screens |
 
 ## Status and roadmap
